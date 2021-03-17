@@ -10,13 +10,15 @@ import Foundation
 import NetworkManager
 
 class StarGazersRequest: GetRequest<StarGazersResponse> {
-    private let perPageItems: Int = 15
+    let perPageItems: Int = 15
+    let pageKey: String = "page"
+    let perPageKey: String = "per_page"
 
     init(repositoryName: String, owner: String, page: Int) {
         let host = "api.github.com"
         let path = "repos/\(owner)/\(repositoryName)/stargazers"
 
-        let queryParameters: [String : CustomStringConvertible] = ["per_page": perPageItems, "page": page]
+        let queryParameters: [String : CustomStringConvertible] = [perPageKey: perPageItems, pageKey: page]
 
         super.init(host: host, path: path, queryParameters: queryParameters)
     }
