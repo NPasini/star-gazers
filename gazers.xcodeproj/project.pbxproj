@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A822C6F52602195D00B8A0E8 /* AssemblerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822C6F42602195D00B8A0E8 /* AssemblerWrapper.swift */; };
+		A822C6FB260219A800B8A0E8 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A822C6FA260219A800B8A0E8 /* Swinject */; };
+		A822C704260219CB00B8A0E8 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = A822C703260219CB00B8A0E8 /* NetworkManager */; };
+		A822C70D260219E300B8A0E8 /* OSLogger in Frameworks */ = {isa = PBXBuildFile; productRef = A822C70C260219E300B8A0E8 /* OSLogger */; };
+		A822C71326021AAC00B8A0E8 /* RepositortAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822C71226021AAC00B8A0E8 /* RepositortAssembly.swift */; };
+		A822C71926021FFD00B8A0E8 /* StarGazersRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822C71826021FFD00B8A0E8 /* StarGazersRepositoryService.swift */; };
 		A8778E8D2601644A005EBB7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E8C2601644A005EBB7A /* AppDelegate.swift */; };
 		A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E8E2601644A005EBB7A /* SceneDelegate.swift */; };
 		A8778E912601644A005EBB7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E902601644A005EBB7A /* ViewController.swift */; };
@@ -15,14 +21,12 @@
 		A8778E992601644B005EBB7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8778E972601644B005EBB7A /* LaunchScreen.storyboard */; };
 		A8778EA42601644B005EBB7A /* gazersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EA32601644B005EBB7A /* gazersTests.swift */; };
 		A8778EAF2601644B005EBB7A /* gazersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EAE2601644B005EBB7A /* gazersUITests.swift */; };
-		A8778ECA260164C0005EBB7A /* OSLogger in Frameworks */ = {isa = PBXBuildFile; productRef = A8778EC9260164C0005EBB7A /* OSLogger */; };
 		A8778EDE260165FF005EBB7A /* StarGazersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EDD260165FF005EBB7A /* StarGazersRequest.swift */; };
 		A8778EE32601663F005EBB7A /* StarGazersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EE22601663F005EBB7A /* StarGazersResponse.swift */; };
 		A8778EE9260168FD005EBB7A /* Gazer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EE8260168FD005EBB7A /* Gazer.swift */; };
 		A8778EF626016CE7005EBB7A /* GazerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EF526016CE7005EBB7A /* GazerError.swift */; };
 		A8778EFB26016D16005EBB7A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EFA26016D16005EBB7A /* NetworkError.swift */; };
 		A8778F0126016DB6005EBB7A /* StarGazersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778F0026016DB6005EBB7A /* StarGazersRepository.swift */; };
-		A8778F0D26017213005EBB7A /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = A8778F0C26017213005EBB7A /* NetworkManager */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A822C6F42602195D00B8A0E8 /* AssemblerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerWrapper.swift; sourceTree = "<group>"; };
+		A822C71226021AAC00B8A0E8 /* RepositortAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositortAssembly.swift; sourceTree = "<group>"; };
+		A822C71826021FFD00B8A0E8 /* StarGazersRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRepositoryService.swift; sourceTree = "<group>"; };
 		A8778E892601644A005EBB7A /* gazers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gazers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8778E8C2601644A005EBB7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8778E8E2601644A005EBB7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,8 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8778ECA260164C0005EBB7A /* OSLogger in Frameworks */,
-				A8778F0D26017213005EBB7A /* NetworkManager in Frameworks */,
+				A822C6FB260219A800B8A0E8 /* Swinject in Frameworks */,
+				A822C70D260219E300B8A0E8 /* OSLogger in Frameworks */,
+				A822C704260219CB00B8A0E8 /* NetworkManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +100,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A822C6ED2602040600B8A0E8 /* StarGazers */ = {
+			isa = PBXGroup;
+			children = (
+				A8778EDD260165FF005EBB7A /* StarGazersRequest.swift */,
+				A8778EE22601663F005EBB7A /* StarGazersResponse.swift */,
+			);
+			path = StarGazers;
+			sourceTree = "<group>";
+		};
+		A822C6F32602194B00B8A0E8 /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				A822C6F42602195D00B8A0E8 /* AssemblerWrapper.swift */,
+				A822C71126021A9D00B8A0E8 /* Assemblies */,
+				A822C71726021FDA00B8A0E8 /* Services */,
+			);
+			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		A822C71126021A9D00B8A0E8 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				A822C71226021AAC00B8A0E8 /* RepositortAssembly.swift */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		A822C71726021FDA00B8A0E8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A822C71826021FFD00B8A0E8 /* StarGazersRepositoryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		A8778E802601644A005EBB7A = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +164,7 @@
 				A8778E902601644A005EBB7A /* ViewController.swift */,
 				A8778E952601644B005EBB7A /* Assets.xcassets */,
 				A8778ED026016550005EBB7A /* API */,
+				A822C6F32602194B00B8A0E8 /* Dependency Injection */,
 				A8778ECE260164F7005EBB7A /* Gazers Page */,
 				A8778E972601644B005EBB7A /* LaunchScreen.storyboard */,
 				A8778E922601644A005EBB7A /* Main.storyboard */,
@@ -159,8 +203,7 @@
 		A8778ED026016550005EBB7A /* API */ = {
 			isa = PBXGroup;
 			children = (
-				A8778EDD260165FF005EBB7A /* StarGazersRequest.swift */,
-				A8778EE22601663F005EBB7A /* StarGazersResponse.swift */,
+				A822C6ED2602040600B8A0E8 /* StarGazers */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -215,8 +258,9 @@
 			);
 			name = gazers;
 			packageProductDependencies = (
-				A8778EC9260164C0005EBB7A /* OSLogger */,
-				A8778F0C26017213005EBB7A /* NetworkManager */,
+				A822C6FA260219A800B8A0E8 /* Swinject */,
+				A822C703260219CB00B8A0E8 /* NetworkManager */,
+				A822C70C260219E300B8A0E8 /* OSLogger */,
 			);
 			productName = gazers;
 			productReference = A8778E892601644A005EBB7A /* gazers.app */;
@@ -290,8 +334,9 @@
 			);
 			mainGroup = A8778E802601644A005EBB7A;
 			packageReferences = (
-				A8778EC8260164C0005EBB7A /* XCRemoteSwiftPackageReference "OSLogger" */,
-				A8778F0B26017213005EBB7A /* XCRemoteSwiftPackageReference "NetworkManager" */,
+				A822C6F9260219A800B8A0E8 /* XCRemoteSwiftPackageReference "Swinject" */,
+				A822C702260219CB00B8A0E8 /* XCRemoteSwiftPackageReference "NetworkManager" */,
+				A822C70B260219E300B8A0E8 /* XCRemoteSwiftPackageReference "OSLogger" */,
 			);
 			productRefGroup = A8778E8A2601644A005EBB7A /* Products */;
 			projectDirPath = "";
@@ -344,7 +389,10 @@
 				A8778E8D2601644A005EBB7A /* AppDelegate.swift in Sources */,
 				A8778F0126016DB6005EBB7A /* StarGazersRepository.swift in Sources */,
 				A8778EE32601663F005EBB7A /* StarGazersResponse.swift in Sources */,
+				A822C6F52602195D00B8A0E8 /* AssemblerWrapper.swift in Sources */,
+				A822C71926021FFD00B8A0E8 /* StarGazersRepositoryService.swift in Sources */,
 				A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */,
+				A822C71326021AAC00B8A0E8 /* RepositortAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,34 +721,47 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A8778EC8260164C0005EBB7A /* XCRemoteSwiftPackageReference "OSLogger" */ = {
+		A822C6F9260219A800B8A0E8 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/NPasini/OSLogger.git";
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
 			};
 		};
-		A8778F0B26017213005EBB7A /* XCRemoteSwiftPackageReference "NetworkManager" */ = {
+		A822C702260219CB00B8A0E8 /* XCRemoteSwiftPackageReference "NetworkManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/NPasini/NetworkManager.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		A822C70B260219E300B8A0E8 /* XCRemoteSwiftPackageReference "OSLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NPasini/OSLogger.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A8778EC9260164C0005EBB7A /* OSLogger */ = {
+		A822C6FA260219A800B8A0E8 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A8778EC8260164C0005EBB7A /* XCRemoteSwiftPackageReference "OSLogger" */;
-			productName = OSLogger;
+			package = A822C6F9260219A800B8A0E8 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
-		A8778F0C26017213005EBB7A /* NetworkManager */ = {
+		A822C703260219CB00B8A0E8 /* NetworkManager */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A8778F0B26017213005EBB7A /* XCRemoteSwiftPackageReference "NetworkManager" */;
+			package = A822C702260219CB00B8A0E8 /* XCRemoteSwiftPackageReference "NetworkManager" */;
 			productName = NetworkManager;
+		};
+		A822C70C260219E300B8A0E8 /* OSLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A822C70B260219E300B8A0E8 /* XCRemoteSwiftPackageReference "OSLogger" */;
+			productName = OSLogger;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
