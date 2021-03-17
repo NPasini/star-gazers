@@ -9,17 +9,20 @@ import Foundation
 
 struct Gazer: Decodable {
     enum CodingKeys: CodingKey {
+        case id
         case login
         case avatar_url
     }
 
-    let name: String
-    let avatarUrl :String
+    let id: Int
+    let name: String?
+    let avatarUrl: String?
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        name = try container.decode(String.self, forKey: .login)
-        avatarUrl = try container.decode(String.self, forKey: .avatar_url)
+        id = try container.decode(Int.self, forKey: .id)
+        name = try container.decodeIfPresent(String.self, forKey: .login)
+        avatarUrl = try container.decodeIfPresent(String.self, forKey: .avatar_url)
     }
 }
