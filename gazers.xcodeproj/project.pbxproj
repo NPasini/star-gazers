@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8778E8D2601644A005EBB7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E8C2601644A005EBB7A /* AppDelegate.swift */; };
+		A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E8E2601644A005EBB7A /* SceneDelegate.swift */; };
+		A8778E912601644A005EBB7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E902601644A005EBB7A /* ViewController.swift */; };
+		A8778E942601644A005EBB7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8778E922601644A005EBB7A /* Main.storyboard */; };
+		A8778E962601644B005EBB7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8778E952601644B005EBB7A /* Assets.xcassets */; };
+		A8778E992601644B005EBB7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8778E972601644B005EBB7A /* LaunchScreen.storyboard */; };
+		A8778EA42601644B005EBB7A /* gazersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EA32601644B005EBB7A /* gazersTests.swift */; };
+		A8778EAF2601644B005EBB7A /* gazersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EAE2601644B005EBB7A /* gazersUITests.swift */; };
+		A8778ECA260164C0005EBB7A /* OSLogger in Frameworks */ = {isa = PBXBuildFile; productRef = A8778EC9260164C0005EBB7A /* OSLogger */; };
+		A8778EDE260165FF005EBB7A /* StarGazersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EDD260165FF005EBB7A /* StarGazersRequest.swift */; };
+		A8778EE32601663F005EBB7A /* StarGazersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EE22601663F005EBB7A /* StarGazersResponse.swift */; };
+		A8778EE9260168FD005EBB7A /* Gazer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EE8260168FD005EBB7A /* Gazer.swift */; };
+		A8778EF626016CE7005EBB7A /* GazerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EF526016CE7005EBB7A /* GazerError.swift */; };
+		A8778EFB26016D16005EBB7A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EFA26016D16005EBB7A /* NetworkError.swift */; };
+		A8778F0126016DB6005EBB7A /* StarGazersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778F0026016DB6005EBB7A /* StarGazersRepository.swift */; };
+		A8778F0D26017213005EBB7A /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = A8778F0C26017213005EBB7A /* NetworkManager */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8778EA02601644B005EBB7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8778E812601644A005EBB7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8778E882601644A005EBB7A;
+			remoteInfo = gazers;
+		};
+		A8778EAB2601644B005EBB7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8778E812601644A005EBB7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8778E882601644A005EBB7A;
+			remoteInfo = gazers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A8778E892601644A005EBB7A /* gazers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gazers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8778E8C2601644A005EBB7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A8778E8E2601644A005EBB7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A8778E902601644A005EBB7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A8778E932601644A005EBB7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A8778E952601644B005EBB7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8778E982601644B005EBB7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A8778E9A2601644B005EBB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8778E9F2601644B005EBB7A /* gazersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gazersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8778EA32601644B005EBB7A /* gazersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gazersTests.swift; sourceTree = "<group>"; };
+		A8778EA52601644B005EBB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8778EAA2601644B005EBB7A /* gazersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gazersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8778EAE2601644B005EBB7A /* gazersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gazersUITests.swift; sourceTree = "<group>"; };
+		A8778EB02601644B005EBB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8778EDD260165FF005EBB7A /* StarGazersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRequest.swift; sourceTree = "<group>"; };
+		A8778EE22601663F005EBB7A /* StarGazersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersResponse.swift; sourceTree = "<group>"; };
+		A8778EE8260168FD005EBB7A /* Gazer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gazer.swift; sourceTree = "<group>"; };
+		A8778EF526016CE7005EBB7A /* GazerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GazerError.swift; sourceTree = "<group>"; };
+		A8778EFA26016D16005EBB7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A8778F0026016DB6005EBB7A /* StarGazersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRepository.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8778E862601644A005EBB7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8778ECA260164C0005EBB7A /* OSLogger in Frameworks */,
+				A8778F0D26017213005EBB7A /* NetworkManager in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8778E9C2601644B005EBB7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8778EA72601644B005EBB7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8778E802601644A005EBB7A = {
+			isa = PBXGroup;
+			children = (
+				A8778E8B2601644A005EBB7A /* gazers */,
+				A8778EA22601644B005EBB7A /* gazersTests */,
+				A8778EAD2601644B005EBB7A /* gazersUITests */,
+				A8778E8A2601644A005EBB7A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8778E8A2601644A005EBB7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8778E892601644A005EBB7A /* gazers.app */,
+				A8778E9F2601644B005EBB7A /* gazersTests.xctest */,
+				A8778EAA2601644B005EBB7A /* gazersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8778E8B2601644A005EBB7A /* gazers */ = {
+			isa = PBXGroup;
+			children = (
+				A8778E9A2601644B005EBB7A /* Info.plist */,
+				A8778E8C2601644A005EBB7A /* AppDelegate.swift */,
+				A8778E8E2601644A005EBB7A /* SceneDelegate.swift */,
+				A8778E902601644A005EBB7A /* ViewController.swift */,
+				A8778E952601644B005EBB7A /* Assets.xcassets */,
+				A8778ED026016550005EBB7A /* API */,
+				A8778ECE260164F7005EBB7A /* Gazers Page */,
+				A8778E972601644B005EBB7A /* LaunchScreen.storyboard */,
+				A8778E922601644A005EBB7A /* Main.storyboard */,
+				A8778EE7260168E6005EBB7A /* Models */,
+				A8778EF326016BC1005EBB7A /* Utilities */,
+			);
+			path = gazers;
+			sourceTree = "<group>";
+		};
+		A8778EA22601644B005EBB7A /* gazersTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8778EA32601644B005EBB7A /* gazersTests.swift */,
+				A8778EA52601644B005EBB7A /* Info.plist */,
+			);
+			path = gazersTests;
+			sourceTree = "<group>";
+		};
+		A8778EAD2601644B005EBB7A /* gazersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A8778EAE2601644B005EBB7A /* gazersUITests.swift */,
+				A8778EB02601644B005EBB7A /* Info.plist */,
+			);
+			path = gazersUITests;
+			sourceTree = "<group>";
+		};
+		A8778ECE260164F7005EBB7A /* Gazers Page */ = {
+			isa = PBXGroup;
+			children = (
+				A8778EFF26016DA6005EBB7A /* Repositories */,
+			);
+			path = "Gazers Page";
+			sourceTree = "<group>";
+		};
+		A8778ED026016550005EBB7A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A8778EDD260165FF005EBB7A /* StarGazersRequest.swift */,
+				A8778EE22601663F005EBB7A /* StarGazersResponse.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A8778EE7260168E6005EBB7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8778EE8260168FD005EBB7A /* Gazer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A8778EF326016BC1005EBB7A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A8778EF426016BC7005EBB7A /* Errors */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A8778EF426016BC7005EBB7A /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				A8778EF526016CE7005EBB7A /* GazerError.swift */,
+				A8778EFA26016D16005EBB7A /* NetworkError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		A8778EFF26016DA6005EBB7A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A8778F0026016DB6005EBB7A /* StarGazersRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8778E882601644A005EBB7A /* gazers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8778EB32601644B005EBB7A /* Build configuration list for PBXNativeTarget "gazers" */;
+			buildPhases = (
+				A8778E852601644A005EBB7A /* Sources */,
+				A8778E862601644A005EBB7A /* Frameworks */,
+				A8778E872601644A005EBB7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gazers;
+			packageProductDependencies = (
+				A8778EC9260164C0005EBB7A /* OSLogger */,
+				A8778F0C26017213005EBB7A /* NetworkManager */,
+			);
+			productName = gazers;
+			productReference = A8778E892601644A005EBB7A /* gazers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8778E9E2601644B005EBB7A /* gazersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8778EB62601644B005EBB7A /* Build configuration list for PBXNativeTarget "gazersTests" */;
+			buildPhases = (
+				A8778E9B2601644B005EBB7A /* Sources */,
+				A8778E9C2601644B005EBB7A /* Frameworks */,
+				A8778E9D2601644B005EBB7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8778EA12601644B005EBB7A /* PBXTargetDependency */,
+			);
+			name = gazersTests;
+			productName = gazersTests;
+			productReference = A8778E9F2601644B005EBB7A /* gazersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A8778EA92601644B005EBB7A /* gazersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8778EB92601644B005EBB7A /* Build configuration list for PBXNativeTarget "gazersUITests" */;
+			buildPhases = (
+				A8778EA62601644B005EBB7A /* Sources */,
+				A8778EA72601644B005EBB7A /* Frameworks */,
+				A8778EA82601644B005EBB7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8778EAC2601644B005EBB7A /* PBXTargetDependency */,
+			);
+			name = gazersUITests;
+			productName = gazersUITests;
+			productReference = A8778EAA2601644B005EBB7A /* gazersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8778E812601644A005EBB7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					A8778E882601644A005EBB7A = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					A8778E9E2601644B005EBB7A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = A8778E882601644A005EBB7A;
+					};
+					A8778EA92601644B005EBB7A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = A8778E882601644A005EBB7A;
+					};
+				};
+			};
+			buildConfigurationList = A8778E842601644A005EBB7A /* Build configuration list for PBXProject "gazers" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A8778E802601644A005EBB7A;
+			packageReferences = (
+				A8778EC8260164C0005EBB7A /* XCRemoteSwiftPackageReference "OSLogger" */,
+				A8778F0B26017213005EBB7A /* XCRemoteSwiftPackageReference "NetworkManager" */,
+			);
+			productRefGroup = A8778E8A2601644A005EBB7A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8778E882601644A005EBB7A /* gazers */,
+				A8778E9E2601644B005EBB7A /* gazersTests */,
+				A8778EA92601644B005EBB7A /* gazersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8778E872601644A005EBB7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8778E992601644B005EBB7A /* LaunchScreen.storyboard in Resources */,
+				A8778E962601644B005EBB7A /* Assets.xcassets in Resources */,
+				A8778E942601644A005EBB7A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8778E9D2601644B005EBB7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8778EA82601644B005EBB7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8778E852601644A005EBB7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8778E912601644A005EBB7A /* ViewController.swift in Sources */,
+				A8778EFB26016D16005EBB7A /* NetworkError.swift in Sources */,
+				A8778EF626016CE7005EBB7A /* GazerError.swift in Sources */,
+				A8778EE9260168FD005EBB7A /* Gazer.swift in Sources */,
+				A8778EDE260165FF005EBB7A /* StarGazersRequest.swift in Sources */,
+				A8778E8D2601644A005EBB7A /* AppDelegate.swift in Sources */,
+				A8778F0126016DB6005EBB7A /* StarGazersRepository.swift in Sources */,
+				A8778EE32601663F005EBB7A /* StarGazersResponse.swift in Sources */,
+				A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8778E9B2601644B005EBB7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8778EA42601644B005EBB7A /* gazersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8778EA62601644B005EBB7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8778EAF2601644B005EBB7A /* gazersUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8778EA12601644B005EBB7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8778E882601644A005EBB7A /* gazers */;
+			targetProxy = A8778EA02601644B005EBB7A /* PBXContainerItemProxy */;
+		};
+		A8778EAC2601644B005EBB7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8778E882601644A005EBB7A /* gazers */;
+			targetProxy = A8778EAB2601644B005EBB7A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A8778E922601644A005EBB7A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8778E932601644A005EBB7A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A8778E972601644B005EBB7A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8778E982601644B005EBB7A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8778EB12601644B005EBB7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A8778EB22601644B005EBB7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8778EB42601644B005EBB7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = gazers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = npasini.gazers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A8778EB52601644B005EBB7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = gazers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = npasini.gazers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A8778EB72601644B005EBB7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = gazersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = npasini.gazersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gazers.app/gazers";
+			};
+			name = Debug;
+		};
+		A8778EB82601644B005EBB7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = gazersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = npasini.gazersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gazers.app/gazers";
+			};
+			name = Release;
+		};
+		A8778EBA2601644B005EBB7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = gazersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = npasini.gazersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = gazers;
+			};
+			name = Debug;
+		};
+		A8778EBB2601644B005EBB7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = gazersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = npasini.gazersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = gazers;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8778E842601644A005EBB7A /* Build configuration list for PBXProject "gazers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8778EB12601644B005EBB7A /* Debug */,
+				A8778EB22601644B005EBB7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8778EB32601644B005EBB7A /* Build configuration list for PBXNativeTarget "gazers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8778EB42601644B005EBB7A /* Debug */,
+				A8778EB52601644B005EBB7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8778EB62601644B005EBB7A /* Build configuration list for PBXNativeTarget "gazersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8778EB72601644B005EBB7A /* Debug */,
+				A8778EB82601644B005EBB7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8778EB92601644B005EBB7A /* Build configuration list for PBXNativeTarget "gazersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8778EBA2601644B005EBB7A /* Debug */,
+				A8778EBB2601644B005EBB7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8778EC8260164C0005EBB7A /* XCRemoteSwiftPackageReference "OSLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NPasini/OSLogger.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A8778F0B26017213005EBB7A /* XCRemoteSwiftPackageReference "NetworkManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NPasini/NetworkManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8778EC9260164C0005EBB7A /* OSLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8778EC8260164C0005EBB7A /* XCRemoteSwiftPackageReference "OSLogger" */;
+			productName = OSLogger;
+		};
+		A8778F0C26017213005EBB7A /* NetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8778F0B26017213005EBB7A /* XCRemoteSwiftPackageReference "NetworkManager" */;
+			productName = NetworkManager;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A8778E812601644A005EBB7A /* Project object */;
+}
