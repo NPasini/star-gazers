@@ -13,6 +13,7 @@
 		A822C70D260219E300B8A0E8 /* OSLogger in Frameworks */ = {isa = PBXBuildFile; productRef = A822C70C260219E300B8A0E8 /* OSLogger */; };
 		A822C71326021AAC00B8A0E8 /* RepositortAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822C71226021AAC00B8A0E8 /* RepositortAssembly.swift */; };
 		A822C71926021FFD00B8A0E8 /* StarGazersRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822C71826021FFD00B8A0E8 /* StarGazersRepositoryService.swift */; };
+		A822C73D2602AB2C00B8A0E8 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = A822C73C2602AB2C00B8A0E8 /* Nimble */; };
 		A8778E8D2601644A005EBB7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E8C2601644A005EBB7A /* AppDelegate.swift */; };
 		A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E8E2601644A005EBB7A /* SceneDelegate.swift */; };
 		A8778E912601644A005EBB7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E902601644A005EBB7A /* ViewController.swift */; };
@@ -78,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A822C6FB260219A800B8A0E8 /* Swinject in Frameworks */,
+				A822C73D2602AB2C00B8A0E8 /* Nimble in Frameworks */,
 				A822C70D260219E300B8A0E8 /* OSLogger in Frameworks */,
 				A822C704260219CB00B8A0E8 /* NetworkManager in Frameworks */,
 			);
@@ -261,6 +263,7 @@
 				A822C6FA260219A800B8A0E8 /* Swinject */,
 				A822C703260219CB00B8A0E8 /* NetworkManager */,
 				A822C70C260219E300B8A0E8 /* OSLogger */,
+				A822C73C2602AB2C00B8A0E8 /* Nimble */,
 			);
 			productName = gazers;
 			productReference = A8778E892601644A005EBB7A /* gazers.app */;
@@ -337,6 +340,7 @@
 				A822C6F9260219A800B8A0E8 /* XCRemoteSwiftPackageReference "Swinject" */,
 				A822C702260219CB00B8A0E8 /* XCRemoteSwiftPackageReference "NetworkManager" */,
 				A822C70B260219E300B8A0E8 /* XCRemoteSwiftPackageReference "OSLogger" */,
+				A822C73B2602AB2C00B8A0E8 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = A8778E8A2601644A005EBB7A /* Products */;
 			projectDirPath = "";
@@ -745,6 +749,14 @@
 				minimumVersion = 1.1.3;
 			};
 		};
+		A822C73B2602AB2C00B8A0E8 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -762,6 +774,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A822C70B260219E300B8A0E8 /* XCRemoteSwiftPackageReference "OSLogger" */;
 			productName = OSLogger;
+		};
+		A822C73C2602AB2C00B8A0E8 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A822C73B2602AB2C00B8A0E8 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
