@@ -10,7 +10,7 @@ import Foundation
 import ReactiveSwift
 import NetworkManager
 
-class StarGazersRepository {
+class StarGazersRepository: StarGazersRepositoryService {
     let owner: String
     let repository: String
 
@@ -19,7 +19,7 @@ class StarGazersRepository {
         self.repository = repository
     }
 
-    func getGazers(page: Int = 1) -> SignalProducer<Result<[Gazer], NSError>, Never> {
+    func getGazers(page: Int) -> SignalProducer<Result<[Gazer], NSError>, Never> {
         let request = StarGazersRequest(repositoryName: repository, owner: owner, page: page)
         return observableForGetGazers(request)
     }
