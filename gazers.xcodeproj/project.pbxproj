@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23CE1D7AA074412B4E8083A5 /* Pods_gazersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA38BBC9B1A5DC3F44DC120 /* Pods_gazersTests.framework */; };
+		7C12EE6CA4E746322C624568 /* Pods_gazers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196510AB1601AF57AAC6AC5C /* Pods_gazers.framework */; };
+		8B1B100018ED9BB9E9A8F29C /* Pods_gazers_gazersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66789B2AC6290CDC4179E3D /* Pods_gazers_gazersUITests.framework */; };
 		A822C6F52602195D00B8A0E8 /* AssemblerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822C6F42602195D00B8A0E8 /* AssemblerWrapper.swift */; };
 		A822C6FB260219A800B8A0E8 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A822C6FA260219A800B8A0E8 /* Swinject */; };
 		A822C704260219CB00B8A0E8 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = A822C703260219CB00B8A0E8 /* NetworkManager */; };
 		A822C70D260219E300B8A0E8 /* OSLogger in Frameworks */ = {isa = PBXBuildFile; productRef = A822C70C260219E300B8A0E8 /* OSLogger */; };
 		A822C71326021AAC00B8A0E8 /* RepositortAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822C71226021AAC00B8A0E8 /* RepositortAssembly.swift */; };
 		A822C71926021FFD00B8A0E8 /* StarGazersRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822C71826021FFD00B8A0E8 /* StarGazersRepositoryService.swift */; };
-		A822C73D2602AB2C00B8A0E8 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = A822C73C2602AB2C00B8A0E8 /* Nimble */; };
 		A8778E8D2601644A005EBB7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E8C2601644A005EBB7A /* AppDelegate.swift */; };
 		A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E8E2601644A005EBB7A /* SceneDelegate.swift */; };
 		A8778E912601644A005EBB7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E902601644A005EBB7A /* ViewController.swift */; };
@@ -48,6 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		196510AB1601AF57AAC6AC5C /* Pods_gazers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gazers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A74ED5336E07CD2D69CB700 /* Pods-gazers-gazersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gazers-gazersUITests.release.xcconfig"; path = "Target Support Files/Pods-gazers-gazersUITests/Pods-gazers-gazersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		39D42DE013CF0EB6838CFFC6 /* Pods-gazersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gazersTests.release.xcconfig"; path = "Target Support Files/Pods-gazersTests/Pods-gazersTests.release.xcconfig"; sourceTree = "<group>"; };
+		8679A855B9050BAD94849545 /* Pods-gazers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gazers.release.xcconfig"; path = "Target Support Files/Pods-gazers/Pods-gazers.release.xcconfig"; sourceTree = "<group>"; };
+		A66789B2AC6290CDC4179E3D /* Pods_gazers_gazersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gazers_gazersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A822C6F42602195D00B8A0E8 /* AssemblerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerWrapper.swift; sourceTree = "<group>"; };
 		A822C71226021AAC00B8A0E8 /* RepositortAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositortAssembly.swift; sourceTree = "<group>"; };
 		A822C71826021FFD00B8A0E8 /* StarGazersRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRepositoryService.swift; sourceTree = "<group>"; };
@@ -71,6 +78,10 @@
 		A8778EF526016CE7005EBB7A /* GazerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GazerError.swift; sourceTree = "<group>"; };
 		A8778EFA26016D16005EBB7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		A8778F0026016DB6005EBB7A /* StarGazersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRepository.swift; sourceTree = "<group>"; };
+		ADA38BBC9B1A5DC3F44DC120 /* Pods_gazersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gazersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D68ED67274DB540284F186DD /* Pods-gazersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gazersTests.debug.xcconfig"; path = "Target Support Files/Pods-gazersTests/Pods-gazersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFAF7AD96E96E2E068B66F96 /* Pods-gazers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gazers.debug.xcconfig"; path = "Target Support Files/Pods-gazers/Pods-gazers.debug.xcconfig"; sourceTree = "<group>"; };
+		EAB1ABA031703D7D5F44CC8C /* Pods-gazers-gazersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gazers-gazersUITests.debug.xcconfig"; path = "Target Support Files/Pods-gazers-gazersUITests/Pods-gazers-gazersUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +90,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A822C6FB260219A800B8A0E8 /* Swinject in Frameworks */,
-				A822C73D2602AB2C00B8A0E8 /* Nimble in Frameworks */,
 				A822C70D260219E300B8A0E8 /* OSLogger in Frameworks */,
 				A822C704260219CB00B8A0E8 /* NetworkManager in Frameworks */,
+				7C12EE6CA4E746322C624568 /* Pods_gazers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23CE1D7AA074412B4E8083A5 /* Pods_gazersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +108,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B1B100018ED9BB9E9A8F29C /* Pods_gazers_gazersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BA52B12C3DF0E33332E85F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFAF7AD96E96E2E068B66F96 /* Pods-gazers.debug.xcconfig */,
+				8679A855B9050BAD94849545 /* Pods-gazers.release.xcconfig */,
+				EAB1ABA031703D7D5F44CC8C /* Pods-gazers-gazersUITests.debug.xcconfig */,
+				2A74ED5336E07CD2D69CB700 /* Pods-gazers-gazersUITests.release.xcconfig */,
+				D68ED67274DB540284F186DD /* Pods-gazersTests.debug.xcconfig */,
+				39D42DE013CF0EB6838CFFC6 /* Pods-gazersTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A822C6ED2602040600B8A0E8 /* StarGazers */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +170,8 @@
 				A8778EA22601644B005EBB7A /* gazersTests */,
 				A8778EAD2601644B005EBB7A /* gazersUITests */,
 				A8778E8A2601644A005EBB7A /* Products */,
+				1BA52B12C3DF0E33332E85F0 /* Pods */,
+				FEE75BD7BE3C204CB0A03DB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,6 +271,16 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		FEE75BD7BE3C204CB0A03DB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				196510AB1601AF57AAC6AC5C /* Pods_gazers.framework */,
+				A66789B2AC6290CDC4179E3D /* Pods_gazers_gazersUITests.framework */,
+				ADA38BBC9B1A5DC3F44DC120 /* Pods_gazersTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,6 +288,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8778EB32601644B005EBB7A /* Build configuration list for PBXNativeTarget "gazers" */;
 			buildPhases = (
+				BA6144A6E7650EA45A7BFE4D /* [CP] Check Pods Manifest.lock */,
 				A8778E852601644A005EBB7A /* Sources */,
 				A8778E862601644A005EBB7A /* Frameworks */,
 				A8778E872601644A005EBB7A /* Resources */,
@@ -263,7 +302,6 @@
 				A822C6FA260219A800B8A0E8 /* Swinject */,
 				A822C703260219CB00B8A0E8 /* NetworkManager */,
 				A822C70C260219E300B8A0E8 /* OSLogger */,
-				A822C73C2602AB2C00B8A0E8 /* Nimble */,
 			);
 			productName = gazers;
 			productReference = A8778E892601644A005EBB7A /* gazers.app */;
@@ -273,9 +311,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8778EB62601644B005EBB7A /* Build configuration list for PBXNativeTarget "gazersTests" */;
 			buildPhases = (
+				784A8EA3418F1A98AB4C88D4 /* [CP] Check Pods Manifest.lock */,
 				A8778E9B2601644B005EBB7A /* Sources */,
 				A8778E9C2601644B005EBB7A /* Frameworks */,
 				A8778E9D2601644B005EBB7A /* Resources */,
+				B4F2631F3A4D785C36685157 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -291,9 +331,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8778EB92601644B005EBB7A /* Build configuration list for PBXNativeTarget "gazersUITests" */;
 			buildPhases = (
+				7BDEC1386A215FCECB6EE0D3 /* [CP] Check Pods Manifest.lock */,
 				A8778EA62601644B005EBB7A /* Sources */,
 				A8778EA72601644B005EBB7A /* Frameworks */,
 				A8778EA82601644B005EBB7A /* Resources */,
+				33585BF38029617A49CD2F21 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,7 +382,6 @@
 				A822C6F9260219A800B8A0E8 /* XCRemoteSwiftPackageReference "Swinject" */,
 				A822C702260219CB00B8A0E8 /* XCRemoteSwiftPackageReference "NetworkManager" */,
 				A822C70B260219E300B8A0E8 /* XCRemoteSwiftPackageReference "OSLogger" */,
-				A822C73B2602AB2C00B8A0E8 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = A8778E8A2601644A005EBB7A /* Products */;
 			projectDirPath = "";
@@ -379,6 +420,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33585BF38029617A49CD2F21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gazers-gazersUITests/Pods-gazers-gazersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gazers-gazersUITests/Pods-gazers-gazersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gazers-gazersUITests/Pods-gazers-gazersUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		784A8EA3418F1A98AB4C88D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gazersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BDEC1386A215FCECB6EE0D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gazers-gazersUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4F2631F3A4D785C36685157 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gazersTests/Pods-gazersTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gazersTests/Pods-gazersTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gazersTests/Pods-gazersTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA6144A6E7650EA45A7BFE4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gazers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A8778E852601644A005EBB7A /* Sources */ = {
@@ -569,6 +713,7 @@
 		};
 		A8778EB42601644B005EBB7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFAF7AD96E96E2E068B66F96 /* Pods-gazers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -587,6 +732,7 @@
 		};
 		A8778EB52601644B005EBB7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8679A855B9050BAD94849545 /* Pods-gazers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -605,8 +751,9 @@
 		};
 		A8778EB72601644B005EBB7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D68ED67274DB540284F186DD /* Pods-gazersTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = gazersTests/Info.plist;
@@ -626,8 +773,9 @@
 		};
 		A8778EB82601644B005EBB7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39D42DE013CF0EB6838CFFC6 /* Pods-gazersTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = gazersTests/Info.plist;
@@ -647,8 +795,9 @@
 		};
 		A8778EBA2601644B005EBB7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB1ABA031703D7D5F44CC8C /* Pods-gazers-gazersUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = gazersUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -666,8 +815,9 @@
 		};
 		A8778EBB2601644B005EBB7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A74ED5336E07CD2D69CB700 /* Pods-gazers-gazersUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = gazersUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -749,14 +899,6 @@
 				minimumVersion = 1.1.3;
 			};
 		};
-		A822C73B2602AB2C00B8A0E8 /* XCRemoteSwiftPackageReference "Nimble" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Nimble.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -774,11 +916,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A822C70B260219E300B8A0E8 /* XCRemoteSwiftPackageReference "OSLogger" */;
 			productName = OSLogger;
-		};
-		A822C73C2602AB2C00B8A0E8 /* Nimble */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A822C73B2602AB2C00B8A0E8 /* XCRemoteSwiftPackageReference "Nimble" */;
-			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
