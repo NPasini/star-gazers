@@ -19,12 +19,12 @@ class StarGazersRepository: StarGazersRepositoryService {
         self.repository = repository
     }
 
-    func getGazers(page: Int) -> SignalProducer<Result<[Gazer], NSError>, Never> {
+    func getGazers(page: Int) -> SignalProducer<[Gazer], NSError> {
         let request = StarGazersRequest(repositoryName: repository, owner: owner, page: page)
         return observableForGetGazers(request)
     }
 
-    private func observableForGetGazers(_ request: StarGazersRequest) -> SignalProducer<Result<[Gazer], NSError>, Never> {
+    private func observableForGetGazers(_ request: StarGazersRequest) -> SignalProducer<[Gazer], NSError> {
         return SignalProducer {
             (observer, lifetime) in
 
@@ -32,9 +32,9 @@ class StarGazersRepository: StarGazersRepositoryService {
 
                 switch result {
                 case .success(let response):
-                    observer.send(value: Result.success(response.gazers))
+                    observer.send(value: response.gazers)
                 case .failure(let error):
-                    observer.send(value: Result.failure(error))
+                    observer.send(error: error)
                 }
 
                 observer.sendCompleted()
@@ -46,4 +46,3 @@ class StarGazersRepository: StarGazersRepositoryService {
         }
     }
 }
-
