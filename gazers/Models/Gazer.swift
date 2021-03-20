@@ -18,6 +18,12 @@ struct Gazer: Decodable {
     let name: String?
     let avatarUrl: String?
 
+    init(id: Int, name: String?, avatarUrl: String?) {
+        self.id = id
+        self.name = name
+        self.avatarUrl = avatarUrl
+    }
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 

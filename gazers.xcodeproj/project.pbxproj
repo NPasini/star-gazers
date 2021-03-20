@@ -14,6 +14,9 @@
 		A808AF282602B80C00E7FB19 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = A808AF272602B80C00E7FB19 /* Json.swift */; };
 		A808AF332602BBD700E7FB19 /* starGazersNoAvatarResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = A808AF322602BBD700E7FB19 /* starGazersNoAvatarResponse.json */; };
 		A808AF3C2602BCE100E7FB19 /* starGazersNoIds.json in Resources */ = {isa = PBXBuildFile; fileRef = A808AF3B2602BCE100E7FB19 /* starGazersNoIds.json */; };
+		A808AF472602C0BD00E7FB19 /* TestRepositortAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A808AF462602C0BD00E7FB19 /* TestRepositortAssembly.swift */; };
+		A808AF4E2602C11100E7FB19 /* TestStarGazersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A808AF4D2602C11100E7FB19 /* TestStarGazersRepository.swift */; };
+		A808AF6326063B5D00E7FB19 /* TestGazers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A808AF6226063B5D00E7FB19 /* TestGazers.swift */; };
 		A822C6F52602195D00B8A0E8 /* AssemblerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822C6F42602195D00B8A0E8 /* AssemblerWrapper.swift */; };
 		A822C6FB260219A800B8A0E8 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A822C6FA260219A800B8A0E8 /* Swinject */; };
 		A822C704260219CB00B8A0E8 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = A822C703260219CB00B8A0E8 /* NetworkManager */; };
@@ -64,6 +67,9 @@
 		A808AF272602B80C00E7FB19 /* Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
 		A808AF322602BBD700E7FB19 /* starGazersNoAvatarResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = starGazersNoAvatarResponse.json; sourceTree = "<group>"; };
 		A808AF3B2602BCE100E7FB19 /* starGazersNoIds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = starGazersNoIds.json; sourceTree = "<group>"; };
+		A808AF462602C0BD00E7FB19 /* TestRepositortAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositortAssembly.swift; sourceTree = "<group>"; };
+		A808AF4D2602C11100E7FB19 /* TestStarGazersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStarGazersRepository.swift; sourceTree = "<group>"; };
+		A808AF6226063B5D00E7FB19 /* TestGazers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGazers.swift; sourceTree = "<group>"; };
 		A822C6F42602195D00B8A0E8 /* AssemblerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerWrapper.swift; sourceTree = "<group>"; };
 		A822C71226021AAC00B8A0E8 /* RepositortAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositortAssembly.swift; sourceTree = "<group>"; };
 		A822C71826021FFD00B8A0E8 /* StarGazersRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRepositoryService.swift; sourceTree = "<group>"; };
@@ -146,6 +152,47 @@
 				A808AF3B2602BCE100E7FB19 /* starGazersNoIds.json */,
 			);
 			path = jsons;
+			sourceTree = "<group>";
+		};
+		A808AF442602C09200E7FB19 /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				A808AF452602C0A600E7FB19 /* Assemblies */,
+				A808AF5A260637C300E7FB19 /* Components */,
+			);
+			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		A808AF452602C0A600E7FB19 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				A808AF462602C0BD00E7FB19 /* TestRepositortAssembly.swift */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		A808AF4B2602C0F400E7FB19 /* Gazers Page */ = {
+			isa = PBXGroup;
+			children = (
+				A808AF6126063B4F00E7FB19 /* Mocked Data */,
+			);
+			path = "Gazers Page";
+			sourceTree = "<group>";
+		};
+		A808AF5A260637C300E7FB19 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A808AF4D2602C11100E7FB19 /* TestStarGazersRepository.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A808AF6126063B4F00E7FB19 /* Mocked Data */ = {
+			isa = PBXGroup;
+			children = (
+				A808AF6226063B5D00E7FB19 /* TestGazers.swift */,
+			);
+			path = "Mocked Data";
 			sourceTree = "<group>";
 		};
 		A822C6ED2602040600B8A0E8 /* StarGazers */ = {
@@ -246,8 +293,10 @@
 		A8778EA22601644B005EBB7A /* gazersTests */ = {
 			isa = PBXGroup;
 			children = (
-				A829514E2602AF3800D7357D /* API */,
 				A8778EA52601644B005EBB7A /* Info.plist */,
+				A829514E2602AF3800D7357D /* API */,
+				A808AF442602C09200E7FB19 /* Dependency Injection */,
+				A808AF4B2602C0F400E7FB19 /* Gazers Page */,
 			);
 			path = gazersTests;
 			sourceTree = "<group>";
@@ -591,8 +640,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A808AF6326063B5D00E7FB19 /* TestGazers.swift in Sources */,
 				A829515C2602AF9800D7357D /* StarGazersResponseTests.swift in Sources */,
+				A808AF4E2602C11100E7FB19 /* TestStarGazersRepository.swift in Sources */,
 				A808AF282602B80C00E7FB19 /* Json.swift in Sources */,
+				A808AF472602C0BD00E7FB19 /* TestRepositortAssembly.swift in Sources */,
 				A82951502602AF5400D7357D /* StarGazersRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
