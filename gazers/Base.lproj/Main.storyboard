@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -160,9 +161,58 @@
                     <view key="view" contentMode="scaleToFill" id="9RF-6I-A4b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hp2-KO-0rE">
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="elX-86-rSe">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="elX-86-rSe" id="GEg-IR-6ub">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFO-zd-Zj0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Messsage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C2-Dj-hPw">
+                                        <rect key="frame" x="15" y="10" width="384" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstItem="5C2-Dj-hPw" firstAttribute="centerY" secondItem="OFO-zd-Zj0" secondAttribute="centerY" id="UoH-nn-aZV"/>
+                                    <constraint firstAttribute="trailing" secondItem="5C2-Dj-hPw" secondAttribute="trailing" constant="15" id="ZKE-81-ysc"/>
+                                    <constraint firstItem="5C2-Dj-hPw" firstAttribute="leading" secondItem="OFO-zd-Zj0" secondAttribute="leading" constant="15" id="axx-Vs-uc4"/>
+                                    <constraint firstAttribute="height" constant="40" id="gQs-EQ-a1j"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rn1-ir-X3e"/>
                         <color key="backgroundColor" name="BackLightGrey"/>
+                        <constraints>
+                            <constraint firstItem="rn1-ir-X3e" firstAttribute="trailing" secondItem="OFO-zd-Zj0" secondAttribute="trailing" id="3WS-Lz-dh3"/>
+                            <constraint firstItem="hp2-KO-0rE" firstAttribute="leading" secondItem="rn1-ir-X3e" secondAttribute="leading" id="55V-kd-Zxm"/>
+                            <constraint firstItem="hp2-KO-0rE" firstAttribute="top" secondItem="OFO-zd-Zj0" secondAttribute="bottom" id="6HP-uW-fcd"/>
+                            <constraint firstItem="OFO-zd-Zj0" firstAttribute="top" secondItem="rn1-ir-X3e" secondAttribute="top" id="pMX-b5-xAK"/>
+                            <constraint firstItem="rn1-ir-X3e" firstAttribute="trailing" secondItem="hp2-KO-0rE" secondAttribute="trailing" id="pk9-ho-bgQ"/>
+                            <constraint firstItem="OFO-zd-Zj0" firstAttribute="leading" secondItem="rn1-ir-X3e" secondAttribute="leading" id="prP-5V-DeC"/>
+                            <constraint firstItem="rn1-ir-X3e" firstAttribute="bottom" secondItem="hp2-KO-0rE" secondAttribute="bottom" id="rLr-eT-wfP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="5C2-Dj-hPw" id="nsw-cj-e5A"/>
+                        <outlet property="messageView" destination="OFO-zd-Zj0" id="GzE-AV-5Bc"/>
+                        <outlet property="messageViewHeightConstraint" destination="gQs-EQ-a1j" id="qTh-Mt-DhJ"/>
+                        <outlet property="tableView" destination="hp2-KO-0rE" id="Nkd-Gp-owA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZl-T2-YlZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,5 +229,11 @@
         <namedColor name="FrontOrange">
             <color red="0.99599999189376831" green="0.68199998140335083" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

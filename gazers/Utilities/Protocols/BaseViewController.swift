@@ -8,7 +8,7 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    private let viewModel: ViewModel
+    let viewModel: ViewModel
 
     required init?(coder: NSCoder) {
         fatalError("You must create the view controller passing a view model")

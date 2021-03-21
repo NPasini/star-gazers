@@ -5,16 +5,89 @@
 //  Created by Nicolò Pasini on 21/03/21.
 //
 
+import OSLogger
 import Foundation
+import ReactiveSwift
 
-struct StarGazersListViewModel: ViewModel {
-    func errorMessage() -> String {
-        return ""
+typealias BoolSignal = Signal<Bool, Never>
+
+class StarGazersListViewModel: ViewModel {
+
+    let stopFetchingData: Property<Bool>
+    let gazersDataSource: MutableProperty<[Gazer]>
+
+    private var currentPage: Int
+    private var isFetching: Bool
+    private var errorString: String
+    private let gazersPerPage: Int = 25
+    private let serialDisposable: SerialDisposable
+    private let stopFetchingPipe: (input: BoolSignal.Observer, output: BoolSignal)
+
+    private let gazersRepository: StarGazersRepositoryService? = AssemblerWrapper.shared.resolve(StarGazersRepositoryService.self)
+
+    // MARK: - Lyfe Cycle
+
+    init() {
+        currentPage = 1
+        errorString = ""
+        isFetching = false
+        stopFetchingPipe = BoolSignal.pipe()
+        gazersDataSource = MutableProperty([])
+        serialDisposable = SerialDisposable(nil)
+
+        stopFetchingData = Property(initial: false, then: stopFetchingPipe.output)
     }
-    
+
+    deinit {
+        dispose()
+    }
+
+    //MARK: Public Functions
+
+    func errorMessage() -> String {
+        return errorString
+    }
+
     func isValid() -> Bool {
         return true
     }
 
+    func getStarGazers() {
+        if (!isFetching && !stopFetchingData.value) {
+            OSLogger.dataFlowLog(message: "Fetching new Gazer Models from page \(currentPage)", access: .public, type: .debug)
+            isFetching = true
 
+            if let gazersRepository = gazersRepository {
+                serialDisposable.inner = gazersRepository.getGazers(page: currentPage).on(failed: { [weak self] (error: NSError) in
+                    self?.errorString = "An error occurred while retrieving data"
+                    self?.stopFetchingPipe.input.send(value: true)
+                }, completed: { [weak self] in
+                    self?.currentPage += 1
+                    self?.isFetching = false
+                }, value: { [weak self] (newGazers: [Gazer]) in
+                    if let perPageCount = self?.gazersPerPage {
+                        let endOfFetchingReachedValue = newGazers.count < perPageCount ? true : false
+                        self?.stopFetchingPipe.input.send(value: endOfFetchingReachedValue)
+                    }
+
+                    OSLogger.dataFlowLog(message: "Appending \(newGazers.count) new Gazer Models to previous \(self?.gazersDataSource.value.count ?? 0) Gazer Models", access: .public, type: .debug)
+
+                    self?.gazersDataSource.value.append(contentsOf: newGazers)
+                }).start()
+            }
+        } else if (isFetching) {
+            OSLogger.dataFlowLog(message: "Fetching already in progress for page \(currentPage)", access: .public, type: .debug)
+        } else if (stopFetchingData.value) {
+            OSLogger.dataFlowLog(message: "Fetching stopped because reached end of paged results", access: .public, type: .debug)
+        }
+    }
+
+    //MARK: Private Functions
+    private func dispose() {
+        OSLogger.dataFlowLog(message: "Disposing BeersViewModel", access: .public, type: .debug)
+
+        if (!serialDisposable.isDisposed) {
+            serialDisposable.dispose()
+        }
+    }
 }
