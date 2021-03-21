@@ -46,6 +46,8 @@
 		A8CDF3E22607AFE10094BACB /* StarGazersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CDF3E12607AFE10094BACB /* StarGazersListViewModel.swift */; };
 		A8CDF3EA2607B5920094BACB /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CDF3E92607B5920094BACB /* UIViewController+Extensions.swift */; };
 		A8CDF3EF2607BA7B0094BACB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CDF3EE2607BA7B0094BACB /* Colors.swift */; };
+		A8CDF3FE2607D11A0094BACB /* ReactiveCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A8CDF3FD2607D11A0094BACB /* ReactiveCocoa */; };
+		A8CDF4032607D67F0094BACB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CDF4022607D67F0094BACB /* UIView+Extensions.swift */; };
 		A8FA925C2607ABBE008E1A4D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA925B2607ABBE008E1A4D /* BaseViewController.swift */; };
 		A8FA92762607AD69008E1A4D /* StarGazersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA92752607AD69008E1A4D /* StarGazersListViewController.swift */; };
 /* End PBXBuildFile section */
@@ -112,6 +114,7 @@
 		A8CDF3E12607AFE10094BACB /* StarGazersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersListViewModel.swift; sourceTree = "<group>"; };
 		A8CDF3E92607B5920094BACB /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		A8CDF3EE2607BA7B0094BACB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A8CDF4022607D67F0094BACB /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		A8FA925B2607ABBE008E1A4D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A8FA92752607AD69008E1A4D /* StarGazersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersListViewController.swift; sourceTree = "<group>"; };
 		ADA38BBC9B1A5DC3F44DC120 /* Pods_gazersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gazersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A822C6FB260219A800B8A0E8 /* Swinject in Frameworks */,
+				A8CDF3FE2607D11A0094BACB /* ReactiveCocoa in Frameworks */,
 				A822C70D260219E300B8A0E8 /* OSLogger in Frameworks */,
 				A822C704260219CB00B8A0E8 /* NetworkManager in Frameworks */,
 				7C12EE6CA4E746322C624568 /* Pods_gazers.framework in Frameworks */,
@@ -317,6 +321,7 @@
 			children = (
 				A8CDF3EE2607BA7B0094BACB /* Colors.swift */,
 				A8CDF3E92607B5920094BACB /* UIViewController+Extensions.swift */,
+				A8CDF4022607D67F0094BACB /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -389,6 +394,8 @@
 				A8778EFF26016DA6005EBB7A /* Repositories */,
 				A8FA92712607AD4E008E1A4D /* ViewControllers */,
 				A8CDF3E02607AFD10094BACB /* ViewModels */,
+				A8CDF4072607D7600094BACB /* Views */,
+				A8CDF4082607D7660094BACB /* Xibs */,
 			);
 			path = "Gazers List";
 			sourceTree = "<group>";
@@ -453,6 +460,20 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		A8CDF4072607D7600094BACB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8CDF4082607D7660094BACB /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		A8FA92712607AD4E008E1A4D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +513,7 @@
 				A822C6FA260219A800B8A0E8 /* Swinject */,
 				A822C703260219CB00B8A0E8 /* NetworkManager */,
 				A822C70C260219E300B8A0E8 /* OSLogger */,
+				A8CDF3FD2607D11A0094BACB /* ReactiveCocoa */,
 			);
 			productName = gazers;
 			productReference = A8778E892601644A005EBB7A /* gazers.app */;
@@ -573,6 +595,7 @@
 				A822C6F9260219A800B8A0E8 /* XCRemoteSwiftPackageReference "Swinject" */,
 				A822C702260219CB00B8A0E8 /* XCRemoteSwiftPackageReference "NetworkManager" */,
 				A822C70B260219E300B8A0E8 /* XCRemoteSwiftPackageReference "OSLogger" */,
+				A8CDF3FC2607D11A0094BACB /* XCRemoteSwiftPackageReference "ReactiveCocoa" */,
 			);
 			productRefGroup = A8778E8A2601644A005EBB7A /* Products */;
 			projectDirPath = "";
@@ -736,6 +759,7 @@
 				A8778E8D2601644A005EBB7A /* AppDelegate.swift in Sources */,
 				A8CDF3EA2607B5920094BACB /* UIViewController+Extensions.swift in Sources */,
 				A808AF6F260641A100E7FB19 /* RepositorySelectorViewController.swift in Sources */,
+				A8CDF4032607D67F0094BACB /* UIView+Extensions.swift in Sources */,
 				A8778F0126016DB6005EBB7A /* StarGazersRepository.swift in Sources */,
 				A8778EE32601663F005EBB7A /* StarGazersResponse.swift in Sources */,
 				A864ED1F26075F56003E7F21 /* RepositorySelectorViewModel.swift in Sources */,
@@ -1113,6 +1137,14 @@
 				minimumVersion = 1.1.3;
 			};
 		};
+		A8CDF3FC2607D11A0094BACB /* XCRemoteSwiftPackageReference "ReactiveCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveCocoa/ReactiveCocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1130,6 +1162,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A822C70B260219E300B8A0E8 /* XCRemoteSwiftPackageReference "OSLogger" */;
 			productName = OSLogger;
+		};
+		A8CDF3FD2607D11A0094BACB /* ReactiveCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8CDF3FC2607D11A0094BACB /* XCRemoteSwiftPackageReference "ReactiveCocoa" */;
+			productName = ReactiveCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
