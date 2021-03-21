@@ -27,6 +27,9 @@
 		A82951502602AF5400D7357D /* StarGazersRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A829514F2602AF5400D7357D /* StarGazersRequestTests.swift */; };
 		A829515C2602AF9800D7357D /* StarGazersResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A829515B2602AF9800D7357D /* StarGazersResponseTests.swift */; };
 		A864ED1F26075F56003E7F21 /* RepositorySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */; };
+		A864ED37260767A5003E7F21 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED36260767A5003E7F21 /* Navigation.swift */; };
+		A864ED3C260767D7003E7F21 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED3B260767D7003E7F21 /* Page.swift */; };
+		A864ED4226076837003E7F21 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED4126076837003E7F21 /* ViewModel.swift */; };
 		A8778E8D2601644A005EBB7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E8C2601644A005EBB7A /* AppDelegate.swift */; };
 		A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E8E2601644A005EBB7A /* SceneDelegate.swift */; };
 		A8778E912601644A005EBB7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E902601644A005EBB7A /* ViewController.swift */; };
@@ -40,6 +43,9 @@
 		A8778EF626016CE7005EBB7A /* GazerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EF526016CE7005EBB7A /* GazerError.swift */; };
 		A8778EFB26016D16005EBB7A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EFA26016D16005EBB7A /* NetworkError.swift */; };
 		A8778F0126016DB6005EBB7A /* StarGazersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778F0026016DB6005EBB7A /* StarGazersRepository.swift */; };
+		A8CDF3E22607AFE10094BACB /* StarGazersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CDF3E12607AFE10094BACB /* StarGazersListViewModel.swift */; };
+		A8FA925C2607ABBE008E1A4D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA925B2607ABBE008E1A4D /* BaseViewController.swift */; };
+		A8FA92762607AD69008E1A4D /* StarGazersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA92752607AD69008E1A4D /* StarGazersListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,9 @@
 		A829514F2602AF5400D7357D /* StarGazersRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRequestTests.swift; sourceTree = "<group>"; };
 		A829515B2602AF9800D7357D /* StarGazersResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersResponseTests.swift; sourceTree = "<group>"; };
 		A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelectorViewModel.swift; sourceTree = "<group>"; };
+		A864ED36260767A5003E7F21 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		A864ED3B260767D7003E7F21 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		A864ED4126076837003E7F21 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A8778E892601644A005EBB7A /* gazers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gazers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8778E8C2601644A005EBB7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8778E8E2601644A005EBB7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +107,9 @@
 		A8778EF526016CE7005EBB7A /* GazerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GazerError.swift; sourceTree = "<group>"; };
 		A8778EFA26016D16005EBB7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		A8778F0026016DB6005EBB7A /* StarGazersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRepository.swift; sourceTree = "<group>"; };
+		A8CDF3E12607AFE10094BACB /* StarGazersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersListViewModel.swift; sourceTree = "<group>"; };
+		A8FA925B2607ABBE008E1A4D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A8FA92752607AD69008E1A4D /* StarGazersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersListViewController.swift; sourceTree = "<group>"; };
 		ADA38BBC9B1A5DC3F44DC120 /* Pods_gazersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gazersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68ED67274DB540284F186DD /* Pods-gazersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gazersTests.debug.xcconfig"; path = "Target Support Files/Pods-gazersTests/Pods-gazersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DFAF7AD96E96E2E068B66F96 /* Pods-gazers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gazers.debug.xcconfig"; path = "Target Support Files/Pods-gazers/Pods-gazers.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,13 +211,13 @@
 			path = "Mocked Data";
 			sourceTree = "<group>";
 		};
-		A808AF6D26063F3100E7FB19 /* Repository Selector Page */ = {
+		A808AF6D26063F3100E7FB19 /* Repository Selector */ = {
 			isa = PBXGroup;
 			children = (
 				A864ED1D26075F44003E7F21 /* ViewModels */,
 				A808AF73260641A600E7FB19 /* ViewControllers */,
 			);
-			path = "Repository Selector Page";
+			path = "Repository Selector";
 			sourceTree = "<group>";
 		};
 		A808AF73260641A600E7FB19 /* ViewControllers */ = {
@@ -278,6 +290,31 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		A864ED352607668E003E7F21 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A864ED36260767A5003E7F21 /* Navigation.swift */,
+				A864ED3B260767D7003E7F21 /* Page.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A864ED402607682A003E7F21 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A864ED4126076837003E7F21 /* ViewModel.swift */,
+				A8FA925B2607ABBE008E1A4D /* BaseViewController.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A864ED4626076951003E7F21 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A8778E802601644A005EBB7A = {
 			isa = PBXGroup;
 			children = (
@@ -310,11 +347,11 @@
 				A8778E952601644B005EBB7A /* Assets.xcassets */,
 				A8778ED026016550005EBB7A /* API */,
 				A822C6F32602194B00B8A0E8 /* Dependency Injection */,
-				A8778ECE260164F7005EBB7A /* Gazers Page */,
 				A8778E972601644B005EBB7A /* LaunchScreen.storyboard */,
 				A8778E922601644A005EBB7A /* Main.storyboard */,
 				A8778EE7260168E6005EBB7A /* Models */,
-				A808AF6D26063F3100E7FB19 /* Repository Selector Page */,
+				A864ED352607668E003E7F21 /* Navigation */,
+				A8CDF3D92607AF580094BACB /* Pages */,
 				A8778EF326016BC1005EBB7A /* Utilities */,
 			);
 			path = gazers;
@@ -340,12 +377,14 @@
 			path = gazersUITests;
 			sourceTree = "<group>";
 		};
-		A8778ECE260164F7005EBB7A /* Gazers Page */ = {
+		A8778ECE260164F7005EBB7A /* Gazers List */ = {
 			isa = PBXGroup;
 			children = (
 				A8778EFF26016DA6005EBB7A /* Repositories */,
+				A8FA92712607AD4E008E1A4D /* ViewControllers */,
+				A8CDF3E02607AFD10094BACB /* ViewModels */,
 			);
-			path = "Gazers Page";
+			path = "Gazers List";
 			sourceTree = "<group>";
 		};
 		A8778ED026016550005EBB7A /* API */ = {
@@ -368,6 +407,8 @@
 			isa = PBXGroup;
 			children = (
 				A8778EF426016BC7005EBB7A /* Errors */,
+				A864ED4626076951003E7F21 /* Extensions */,
+				A864ED402607682A003E7F21 /* Protocols */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -387,6 +428,31 @@
 				A8778F0026016DB6005EBB7A /* StarGazersRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A8CDF3D92607AF580094BACB /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				A8778ECE260164F7005EBB7A /* Gazers List */,
+				A808AF6D26063F3100E7FB19 /* Repository Selector */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		A8CDF3E02607AFD10094BACB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A8CDF3E12607AFE10094BACB /* StarGazersListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A8FA92712607AD4E008E1A4D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8FA92752607AD69008E1A4D /* StarGazersListViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FEE75BD7BE3C204CB0A03DB2 /* Frameworks */ = {
@@ -653,9 +719,13 @@
 			files = (
 				A8778E912601644A005EBB7A /* ViewController.swift in Sources */,
 				A8778EFB26016D16005EBB7A /* NetworkError.swift in Sources */,
+				A8CDF3E22607AFE10094BACB /* StarGazersListViewModel.swift in Sources */,
+				A864ED3C260767D7003E7F21 /* Page.swift in Sources */,
 				A8778EF626016CE7005EBB7A /* GazerError.swift in Sources */,
+				A8FA925C2607ABBE008E1A4D /* BaseViewController.swift in Sources */,
 				A8778EE9260168FD005EBB7A /* Gazer.swift in Sources */,
 				A8778EDE260165FF005EBB7A /* StarGazersRequest.swift in Sources */,
+				A864ED4226076837003E7F21 /* ViewModel.swift in Sources */,
 				A8778E8D2601644A005EBB7A /* AppDelegate.swift in Sources */,
 				A808AF6F260641A100E7FB19 /* RepositorySelectorViewController.swift in Sources */,
 				A8778F0126016DB6005EBB7A /* StarGazersRepository.swift in Sources */,
@@ -663,6 +733,8 @@
 				A864ED1F26075F56003E7F21 /* RepositorySelectorViewModel.swift in Sources */,
 				A822C6F52602195D00B8A0E8 /* AssemblerWrapper.swift in Sources */,
 				A822C71926021FFD00B8A0E8 /* StarGazersRepositoryService.swift in Sources */,
+				A864ED37260767A5003E7F21 /* Navigation.swift in Sources */,
+				A8FA92762607AD69008E1A4D /* StarGazersListViewController.swift in Sources */,
 				A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */,
 				A822C71326021AAC00B8A0E8 /* RepositortAssembly.swift in Sources */,
 			);

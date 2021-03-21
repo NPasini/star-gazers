@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct RepositorySelectorViewModel {
+struct RepositorySelectorViewModel: ViewModel {
+
     private(set) var repositoryName: String?
     private(set) var repositoryOwner: String?
 
@@ -17,5 +18,9 @@ struct RepositorySelectorViewModel {
 
     mutating func setRepositoryOwner(_ owner: String?) {
         repositoryOwner = owner
+    }
+
+    func isValid() -> Bool {
+        return true
     }
 }
