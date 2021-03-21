@@ -10,10 +10,25 @@ import Foundation
 enum Page {
     case starGazerList
 
+    var storyboardId: String {
+        switch self {
+        case .starGazerList:
+            return "Main"
+        }
+    }
+
     var identifier: String {
         switch self {
         case .starGazerList:
-            return "StarGazersListPage"
+            return StarGazersListViewController.identifier
+        }
+    }
+
+    func getViewController(coder: NSCoder, viewModel: ViewModel?) -> BaseViewController? {
+        switch self {
+        case .starGazerList:
+            let viewModel = StarGazersListViewModel()
+            return StarGazersListViewController(coder: coder, viewModel: viewModel)
         }
     }
 }

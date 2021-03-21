@@ -9,4 +9,5 @@ import Foundation
 
 protocol ViewModel {
     func isValid() -> Bool
+    func errorMessage() -> String
 }
