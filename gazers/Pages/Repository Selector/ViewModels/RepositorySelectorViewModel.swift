@@ -21,6 +21,11 @@ struct RepositorySelectorViewModel: ViewModel {
     }
 
     func isValid() -> Bool {
-        return true
+        guard let name = repositoryName, let owner = repositoryOwner else { return false }
+        return !name.isEmpty && !owner.isEmpty
+    }
+
+    func errorMessage() -> String {
+        return "Please, insert both the repository name and the repository owner"
     }
 }

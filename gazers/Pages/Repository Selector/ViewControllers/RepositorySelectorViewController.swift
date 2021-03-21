@@ -30,6 +30,12 @@ class RepositorySelectorViewController: UIViewController {
         repoDetailsView.layer.cornerRadius = 20
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         unregisterForKeyboardNotification()
     }
@@ -37,8 +43,11 @@ class RepositorySelectorViewController: UIViewController {
     @IBAction func submitRepoDetails() {
         activeTextField?.resignFirstResponder()
 
-        if let name = viewModel?.repositoryName, let owner = viewModel?.repositoryOwner {
-//            delegate?.didSelectRepository(name, owner: owner)
+        if viewModel?.isValid() == true {
+            let starGazerListViewModel = StarGazersListViewModel()
+            Navigation.push(page: .starGazerList, with: starGazerListViewModel, using: navigationController)
+        } else {
+            showErrorMessage()
         }
     }
 
@@ -73,6 +82,16 @@ class RepositorySelectorViewController: UIViewController {
         let contentInset = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
         scrollView.scrollIndicatorInsets = contentInset
+    }
+
+    private func showErrorMessage() {
+        let alert = UIAlertController(title: "Error", message: viewModel?.errorMessage(), preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { _ in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(action)
+
+        navigationController?.present(alert, animated: true, completion: nil)
     }
 }
 
