@@ -26,6 +26,7 @@
 		A822C71926021FFD00B8A0E8 /* StarGazersRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822C71826021FFD00B8A0E8 /* StarGazersRepositoryService.swift */; };
 		A82951502602AF5400D7357D /* StarGazersRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A829514F2602AF5400D7357D /* StarGazersRequestTests.swift */; };
 		A829515C2602AF9800D7357D /* StarGazersResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A829515B2602AF9800D7357D /* StarGazersResponseTests.swift */; };
+		A864ED1F26075F56003E7F21 /* RepositorySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */; };
 		A8778E8D2601644A005EBB7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E8C2601644A005EBB7A /* AppDelegate.swift */; };
 		A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E8E2601644A005EBB7A /* SceneDelegate.swift */; };
 		A8778E912601644A005EBB7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778E902601644A005EBB7A /* ViewController.swift */; };
@@ -77,6 +78,7 @@
 		A822C71826021FFD00B8A0E8 /* StarGazersRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRepositoryService.swift; sourceTree = "<group>"; };
 		A829514F2602AF5400D7357D /* StarGazersRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRequestTests.swift; sourceTree = "<group>"; };
 		A829515B2602AF9800D7357D /* StarGazersResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersResponseTests.swift; sourceTree = "<group>"; };
+		A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelectorViewModel.swift; sourceTree = "<group>"; };
 		A8778E892601644A005EBB7A /* gazers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gazers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8778E8C2601644A005EBB7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8778E8E2601644A005EBB7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		A808AF6D26063F3100E7FB19 /* Repository Selector Page */ = {
 			isa = PBXGroup;
 			children = (
+				A864ED1D26075F44003E7F21 /* ViewModels */,
 				A808AF73260641A600E7FB19 /* ViewControllers */,
 			);
 			path = "Repository Selector Page";
@@ -265,6 +268,14 @@
 				A808AF372602BBDC00E7FB19 /* jsons */,
 			);
 			path = StarGazers;
+			sourceTree = "<group>";
+		};
+		A864ED1D26075F44003E7F21 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		A8778E802601644A005EBB7A = {
@@ -649,6 +660,7 @@
 				A808AF6F260641A100E7FB19 /* RepositorySelectorViewController.swift in Sources */,
 				A8778F0126016DB6005EBB7A /* StarGazersRepository.swift in Sources */,
 				A8778EE32601663F005EBB7A /* StarGazersResponse.swift in Sources */,
+				A864ED1F26075F56003E7F21 /* RepositorySelectorViewModel.swift in Sources */,
 				A822C6F52602195D00B8A0E8 /* AssemblerWrapper.swift in Sources */,
 				A822C71926021FFD00B8A0E8 /* StarGazersRepositoryService.swift in Sources */,
 				A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */,

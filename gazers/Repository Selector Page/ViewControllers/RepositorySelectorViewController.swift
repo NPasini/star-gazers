@@ -9,18 +9,22 @@ import UIKit
 
 class RepositorySelectorViewController: UIViewController {
 
-    @IBOutlet weak var repoDetailsView: UIView!
     @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var repoDetailsView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var repoNameText: UITextField!
     @IBOutlet weak var repoOwnerText: UITextField!
 
     private var activeTextField: UITextField?
+    private var viewModel: RepositorySelectorViewModel?
 
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
+        repoNameText.delegate = self
+        repoOwnerText.delegate = self
         registerForKeyboardNotification()
+        viewModel = RepositorySelectorViewModel()
 
         confirmButton.layer.cornerRadius = 20
         repoDetailsView.layer.cornerRadius = 20
@@ -31,6 +35,11 @@ class RepositorySelectorViewController: UIViewController {
     }
 
     @IBAction func submitRepoDetails() {
+        activeTextField?.resignFirstResponder()
+
+        if let name = viewModel?.repositoryName, let owner = viewModel?.repositoryOwner {
+//            delegate?.didSelectRepository(name, owner: owner)
+        }
     }
 
     // MARK: - Private Methods
@@ -64,5 +73,31 @@ class RepositorySelectorViewController: UIViewController {
         let contentInset = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
         scrollView.scrollIndicatorInsets = contentInset
+    }
+}
+
+extension RepositorySelectorViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        saveInsertedData(in: textField)
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        activeTextField = textField
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        saveInsertedData(in: textField)
+        textField.resignFirstResponder()
+        return true
+    }
+
+    private func saveInsertedData(in textField: UITextField) {
+        if textField == repoNameText {
+            viewModel?.setRepositoryName(textField.text)
+        }
+
+        if textField == repoOwnerText {
+            viewModel?.setRepositoryOwner(textField.text)
+        }
     }
 }
