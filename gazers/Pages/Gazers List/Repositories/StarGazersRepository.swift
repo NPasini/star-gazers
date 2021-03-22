@@ -12,15 +12,17 @@ import NetworkManager
 
 class StarGazersRepository: StarGazersRepositoryService {
     let owner: String
+    let perPageItems: Int
     let repository: String
 
-    init(repository: String, owner: String) {
+    init(repository: String, owner: String, perPageItems: Int) {
         self.owner = owner
         self.repository = repository
+        self.perPageItems = perPageItems
     }
 
     func getGazers(page: Int) -> SignalProducer<[Gazer], NSError> {
-        let request = StarGazersRequest(repositoryName: repository, owner: owner, page: page)
+        let request = StarGazersRequest(repositoryName: repository, owner: owner, page: page, perPageItems: perPageItems)
         return observableForGetGazers(request)
     }
 

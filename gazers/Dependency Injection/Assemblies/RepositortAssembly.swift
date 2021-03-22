@@ -9,7 +9,7 @@ import Swinject
 
 class RepositoriesAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(StarGazersRepositoryService.self) { _, repositoryName, repositoryOwner in return StarGazersRepository(repository: repositoryName, owner: repositoryOwner) }
+        container.register(StarGazersRepositoryService.self) { _, repositoryName, repositoryOwner, perPageItems in return StarGazersRepository(repository: repositoryName, owner: repositoryOwner, perPageItems: perPageItems) }
     }
 }
 
