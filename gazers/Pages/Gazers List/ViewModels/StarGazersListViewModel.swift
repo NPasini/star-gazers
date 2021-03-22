@@ -21,13 +21,12 @@ class StarGazersListViewModel: ViewModel {
     private var errorString: String
     private let gazersPerPage: Int = 25
     private let serialDisposable: SerialDisposable
+    private let gazersRepository: StarGazersRepositoryService?
     private let stopFetchingPipe: (input: BoolSignal.Observer, output: BoolSignal)
-
-    private let gazersRepository: StarGazersRepositoryService? = AssemblerWrapper.shared.resolve(StarGazersRepositoryService.self)
 
     // MARK: - Lyfe Cycle
 
-    init() {
+    init(repositoryName: String, repositoryOwner: String) {
         currentPage = 1
         errorString = ""
         isFetching = false
@@ -36,6 +35,8 @@ class StarGazersListViewModel: ViewModel {
         serialDisposable = SerialDisposable(nil)
 
         stopFetchingData = Property(initial: false, then: stopFetchingPipe.output)
+
+        gazersRepository = AssemblerWrapper.shared.resolve(StarGazersRepositoryService.self, arguments: repositoryName, repositoryOwner, gazersPerPage)
     }
 
     deinit {
