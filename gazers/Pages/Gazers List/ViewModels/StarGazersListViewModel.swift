@@ -9,8 +9,6 @@ import OSLogger
 import Foundation
 import ReactiveSwift
 
-typealias BoolSignal = Signal<Bool, Never>
-
 class StarGazersListViewModel: ViewModel {
 
     let stopFetchingData: Property<Bool>
@@ -22,7 +20,7 @@ class StarGazersListViewModel: ViewModel {
     private let gazersPerPage: Int = 25
     private let serialDisposable: SerialDisposable
     private let gazersRepository: StarGazersRepositoryService?
-    private let stopFetchingPipe: (input: BoolSignal.Observer, output: BoolSignal)
+    private let stopFetchingPipe: (output: BoolSignal, input: BoolSignal.Observer)
 
     // MARK: - Lyfe Cycle
 
@@ -33,9 +31,7 @@ class StarGazersListViewModel: ViewModel {
         stopFetchingPipe = BoolSignal.pipe()
         gazersDataSource = MutableProperty([])
         serialDisposable = SerialDisposable(nil)
-
         stopFetchingData = Property(initial: false, then: stopFetchingPipe.output)
-
         gazersRepository = AssemblerWrapper.shared.resolve(StarGazersRepositoryService.self, arguments: repositoryName, repositoryOwner, gazersPerPage)
     }
 
@@ -60,8 +56,8 @@ class StarGazersListViewModel: ViewModel {
 
             if let gazersRepository = gazersRepository {
                 serialDisposable.inner = gazersRepository.getGazers(page: currentPage).on(failed: { [weak self] (error: NSError) in
+                    self?.isFetching = false
                     self?.errorString = "An error occurred while retrieving data"
-                    self?.stopFetchingPipe.input.send(value: true)
                 }, completed: { [weak self] in
                     self?.currentPage += 1
                     self?.isFetching = false
