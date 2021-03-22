@@ -27,8 +27,8 @@ enum Page {
     func getViewController(coder: NSCoder, viewModel: ViewModel?) -> BaseViewController? {
         switch self {
         case .starGazerList:
-            let viewModel = StarGazersListViewModel()
-            return StarGazersListViewController(coder: coder, viewModel: viewModel)
+            guard let vm = viewModel else { return nil }
+            return StarGazersListViewController(coder: coder, viewModel: vm)
         }
     }
 }
