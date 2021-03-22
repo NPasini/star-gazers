@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLogger
 
 class RepositorySelectorViewController: UIViewController {
 
@@ -16,15 +17,16 @@ class RepositorySelectorViewController: UIViewController {
     @IBOutlet weak var repoOwnerText: UITextField!
 
     private var activeTextField: UITextField?
-    private var viewModel: RepositorySelectorViewModel?
+    private var viewModel: RepositorySelectorViewModel = RepositorySelectorViewModel()
 
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+
         repoNameText.delegate = self
         repoOwnerText.delegate = self
         registerForKeyboardNotification()
-        viewModel = RepositorySelectorViewModel()
 
         confirmButton.layer.cornerRadius = 20
         repoDetailsView.layer.cornerRadius = 20
@@ -43,9 +45,8 @@ class RepositorySelectorViewController: UIViewController {
     @IBAction func submitRepoDetails() {
         activeTextField?.resignFirstResponder()
 
-        if viewModel?.isValid() == true {
-            let starGazerListViewModel = StarGazersListViewModel()
-            Navigation.push(page: .starGazerList, with: starGazerListViewModel, using: navigationController)
+        if viewModel.isValid() {
+            navigateToGazerListPage()
         } else {
             showErrorMessage()
         }
@@ -53,11 +54,13 @@ class RepositorySelectorViewController: UIViewController {
 
     // MARK: - Private Methods
     private func registerForKeyboardNotification() {
+        OSLogger.uiLog(message: "Registering from keyboard notifications", access: .public, type: .debug)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     private func unregisterForKeyboardNotification() {
+        OSLogger.uiLog(message: "Unregistering from keyboard notifications", access: .public, type: .debug)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -85,13 +88,19 @@ class RepositorySelectorViewController: UIViewController {
     }
 
     private func showErrorMessage() {
-        let alert = UIAlertController(title: "Error", message: viewModel?.errorMessage(), preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: viewModel.errorMessage(), preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default) { _ in
             alert.dismiss(animated: true, completion: nil)
         }
         alert.addAction(action)
 
         navigationController?.present(alert, animated: true, completion: nil)
+    }
+
+    private func navigateToGazerListPage() {
+        OSLogger.uiLog(message: "Navigating to Star Gazers list page", access: .public, type: .debug)
+        let starGazerListViewModel = StarGazersListViewModel(repositoryName: viewModel.repositoryName, repositoryOwner: viewModel.repositoryOwner)
+        Navigation.push(page: .starGazerList, with: starGazerListViewModel, using: navigationController)
     }
 }
 
@@ -111,12 +120,16 @@ extension RepositorySelectorViewController: UITextFieldDelegate {
     }
 
     private func saveInsertedData(in textField: UITextField) {
-        if textField == repoNameText {
-            viewModel?.setRepositoryName(textField.text)
-        }
+        if let text = textField.text {
+            if textField == repoNameText {
+                OSLogger.uiLog(message: "Set repo name to: \(text)", access: .public, type: .debug)
+                viewModel.setRepositoryName(text)
+            }
 
-        if textField == repoOwnerText {
-            viewModel?.setRepositoryOwner(textField.text)
+            if textField == repoOwnerText {
+                OSLogger.uiLog(message: "Set repo owner to: \(text)", access: .public, type: .debug)
+                viewModel.setRepositoryOwner(text)
+            }
         }
     }
 }

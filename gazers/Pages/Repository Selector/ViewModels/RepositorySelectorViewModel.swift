@@ -9,20 +9,24 @@ import Foundation
 
 struct RepositorySelectorViewModel: ViewModel {
 
-    private(set) var repositoryName: String?
-    private(set) var repositoryOwner: String?
+    private(set) var repositoryName: String
+    private(set) var repositoryOwner: String
 
-    mutating func setRepositoryName(_ name: String?) {
+    init() {
+        repositoryName = ""
+        repositoryOwner = ""
+    }
+
+    mutating func setRepositoryName(_ name: String) {
         repositoryName = name
     }
 
-    mutating func setRepositoryOwner(_ owner: String?) {
+    mutating func setRepositoryOwner(_ owner: String) {
         repositoryOwner = owner
     }
 
     func isValid() -> Bool {
-        guard let name = repositoryName, let owner = repositoryOwner else { return false }
-        return !name.isEmpty && !owner.isEmpty
+        return !repositoryName.isEmpty && !repositoryOwner.isEmpty
     }
 
     func errorMessage() -> String {
