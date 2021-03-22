@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupDependencyInjection() {
-        AssemblerWrapper.shared.register(assemblies: [RepositoriesAssembly()])
+        AssemblerWrapper.shared.register(assemblies: [AppServicesAssembly(), RepositoriesAssembly()])
     }
 }
 
