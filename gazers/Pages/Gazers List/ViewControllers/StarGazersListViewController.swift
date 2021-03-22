@@ -18,10 +18,30 @@ class StarGazersListViewController: BaseViewController {
     @IBOutlet weak var messageViewHeightConstraint: NSLayoutConstraint!
 
     private var compositeDisposable = CompositeDisposable()
-    private let gazersRepository: StarGazersRepositoryService? = AssemblerWrapper.shared.resolve(StarGazersRepositoryService.self)
 
-    private var gazersViewModel: StarGazersListViewModel? {
-        return viewModel as? StarGazersListViewModel
+    private var gazersViewModel: StarGazersListViewModel {
+        if viewModel is StarGazersListViewModel {
+            return viewModel as! StarGazersListViewModel
+        } else {
+            fatalError("The View Model has the wrong type")
+        }
+    }
+
+    // MARK: - Lyfe Cycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        configureTableView()
+        configureNavigationBar()
+        setTitle("Star Gazers List", color: UIColor.frontOrange)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        gazersViewModel.getStarGazers()
+
     }
 
     deinit {
@@ -30,16 +50,7 @@ class StarGazersListViewController: BaseViewController {
         }
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        configureNavigationBar()
-        setTitle("Star Gazers List", color: UIColor.frontOrange)
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
+    // MARK: - Private Methods
 
     private func configureTableView() {
         tableView.delegate = self
@@ -58,28 +69,27 @@ class StarGazersListViewController: BaseViewController {
             spinnerView.centerYAnchor.constraint(equalTo: footerView.centerYAnchor)
         ])
 
-        tableView.rowHeight = 180
+        tableView.rowHeight = 80
         tableView.tableFooterView = footerView
-//        tableView.register(viewType: BeerTableViewCell.self)
-        tableView.backgroundColor = UIColor.clear
+        tableView.register(viewType: StarGazerTableViewCell.self)
 
-        if let vm = gazersViewModel {
-            compositeDisposable += tableView.reactive.reloadData <~ vm.gazersDataSource.signal.map({ _ in
-                OSLogger.uiLog(message: "Reloading TableView", access: .public, type: .debug)
-                return })
+        compositeDisposable += tableView.reactive.reloadData <~ gazersViewModel.gazersDataSource.signal.map({ _ in
+            OSLogger.uiLog(message: "Reloading TableView", access: .public, type: .debug)
+        })
 
-            compositeDisposable += spinnerView.reactive.isAnimating <~ vm.stopFetchingData.producer.map({ [weak self] (stopFetching: Bool) -> Bool in
-                DispatchQueue.main.async {
-                    if (stopFetching) {
-                        self?.tableView.tableFooterView = UIView(frame: .zero)
-                    } else {
-                        self?.tableView.tableFooterView = footerView
-                    }
+        compositeDisposable += spinnerView.reactive.isAnimating <~ gazersViewModel.stopFetchingData.producer.map({ [weak self] (stopFetching: Bool) -> Bool in
+            OSLogger.uiLog(message: "Spinner view is spinning: \(!stopFetching)", access: .public, type: .debug)
+
+            DispatchQueue.main.async {
+                if stopFetching {
+                    self?.tableView.tableFooterView = UIView(frame: .zero)
+                } else {
+                    self?.tableView.tableFooterView = footerView
                 }
+            }
 
-                return !stopFetching
-            })
-        }
+            return !stopFetching
+        })
     }
 
     private func configureNavigationBar() {
@@ -90,17 +100,18 @@ class StarGazersListViewController: BaseViewController {
 
 extension StarGazersListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gazersViewModel?.gazersDataSource.value.count ?? 0
+        return gazersViewModel.gazersDataSource.value.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if let cellModel = gazersViewModel?.gazersDataSource.value[indexPath.row], let cell = tableView.dequeueReusableCell(withIdentifier: BeerTableViewCell.identifier, for: indexPath) as? BeerTableViewCell {
-//            cell.delegate = self
-//            cell.configure(with: cellModel)
-//            return cell
-//        } else {
+        let cellModel = gazersViewModel.gazersDataSource.value[indexPath.row]
+
+        if let cell = tableView.dequeueReusableCell(withIdentifier: StarGazerTableViewCell.identifier, for: indexPath) as? StarGazerTableViewCell {
+            cell.configure(with: cellModel)
+            return cell
+        } else {
             return UITableViewCell()
-//        }
+        }
     }
 }
 
@@ -109,17 +120,13 @@ extension StarGazersListViewController: UITableViewDelegate {
 
 extension StarGazersListViewController: UITableViewDataSourcePrefetching {
     private func isLoadingCell(at indexPath: IndexPath) -> Bool {
-        if let currentCount = gazersViewModel?.gazersDataSource.value.count {
-            return indexPath.row >= (currentCount - 1)
-        } else {
-            return false
-        }
+        return indexPath.row >= (gazersViewModel.gazersDataSource.value.count - 1)
     }
 
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         if (indexPaths.contains(where: isLoadingCell(at:))) {
-            OSLogger.uiLog(message: "Fetching new Data Models", access: .public, type: .debug)
-            gazersViewModel?.getStarGazers()
+            OSLogger.uiLog(message: "Fetching new Star Gazers", access: .public, type: .debug)
+            gazersViewModel.getStarGazers()
         }
     }
 }
