@@ -17,7 +17,11 @@ class StarGazersListViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageViewHeightConstraint: NSLayoutConstraint!
 
+    private let messageViewHeight: CGFloat = 40
+    private let animationDuration: TimeInterval = 0.3
+    private var isNetworkConnectionAvailable: Bool = true
     private var compositeDisposable = CompositeDisposable()
+    private var networkMonitorService: NetworkMonitorService? = AssemblerWrapper.shared.resolve(NetworkMonitorService.self)
 
     private var gazersViewModel: StarGazersListViewModel {
         if viewModel is StarGazersListViewModel {
@@ -35,13 +39,20 @@ class StarGazersListViewController: BaseViewController {
         configureTableView()
         configureNavigationBar()
         setTitle("Star Gazers List", color: UIColor.frontOrange)
+        messageViewHeightConstraint.constant = 0
+
+        compositeDisposable += networkMonitorService?.isNetworkAvailable.signal.observeValues({ [weak self] (isAvailable: Bool?) in
+            if let connectionAvailable = isAvailable {
+                self?.isNetworkConnectionAvailable = connectionAvailable
+                self?.shouldShowNetworkUnavailableMessage(!connectionAvailable)
+            }
+        })
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         gazersViewModel.getStarGazers()
-
     }
 
     deinit {
@@ -70,6 +81,7 @@ class StarGazersListViewController: BaseViewController {
         ])
 
         tableView.rowHeight = 80
+        tableView.backgroundColor = .clear
         tableView.tableFooterView = footerView
         tableView.register(viewType: StarGazerTableViewCell.self)
 
@@ -95,6 +107,35 @@ class StarGazersListViewController: BaseViewController {
     private func configureNavigationBar() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         customizeNavigationBar(backgroundColor: UIColor.backGrey, backButtonColor: UIColor.lightText)
+    }
+
+    private func shouldShowNetworkUnavailableMessage(_ shouldShow: Bool) {
+        if shouldShow {
+            showMessageView(message: "Network not available")
+        } else {
+            hideMessageView()
+        }
+    }
+
+    private func showMessageView(message: String) {
+        DispatchQueue.main.async {
+            self.messageLabel.text = message
+            self.messageViewHeightConstraint.constant = self.messageViewHeight
+
+            UIView.animate(withDuration: self.animationDuration) {
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
+
+    private func hideMessageView() {
+        DispatchQueue.main.async {
+            self.messageViewHeightConstraint.constant = 0
+
+            UIView.animate(withDuration: self.animationDuration) {
+                self.view.layoutIfNeeded()
+            }
+        }
     }
 }
 
@@ -124,7 +165,7 @@ extension StarGazersListViewController: UITableViewDataSourcePrefetching {
     }
 
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        if (indexPaths.contains(where: isLoadingCell(at:))) {
+        if indexPaths.contains(where: isLoadingCell(at:)), isNetworkConnectionAvailable {
             OSLogger.uiLog(message: "Fetching new Star Gazers", access: .public, type: .debug)
             gazersViewModel.getStarGazers()
         }
