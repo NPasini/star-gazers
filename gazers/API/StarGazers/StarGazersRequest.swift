@@ -10,11 +10,10 @@ import Foundation
 import NetworkManager
 
 class StarGazersRequest: GetRequest<StarGazersResponse> {
-    let perPageItems: Int = 15
     let pageKey: String = "page"
     let perPageKey: String = "per_page"
 
-    init(repositoryName: String, owner: String, page: Int) {
+    init(repositoryName: String, owner: String, page: Int, perPageItems: Int) {
         let host = "api.github.com"
         let path = "repos/\(owner)/\(repositoryName)/stargazers"
 
