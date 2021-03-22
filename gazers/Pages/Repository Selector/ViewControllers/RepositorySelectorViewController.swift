@@ -26,10 +26,9 @@ class RepositorySelectorViewController: UIViewController {
 
         repoNameText.delegate = self
         repoOwnerText.delegate = self
-        registerForKeyboardNotification()
 
-        confirmButton.layer.cornerRadius = 20
-        repoDetailsView.layer.cornerRadius = 20
+        setupLayout()
+        registerForKeyboardNotification()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -52,7 +51,7 @@ class RepositorySelectorViewController: UIViewController {
         }
     }
 
-    // MARK: - Private Methods
+    // MARK: - Keyboard Methods
     private func registerForKeyboardNotification() {
         OSLogger.uiLog(message: "Registering from keyboard notifications", access: .public, type: .debug)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
@@ -87,6 +86,13 @@ class RepositorySelectorViewController: UIViewController {
         scrollView.scrollIndicatorInsets = contentInset
     }
 
+    // MARK: - Private Methods
+
+    private func setupLayout() {
+        confirmButton.layer.cornerRadius = 20
+        repoDetailsView.layer.cornerRadius = 20
+    }
+
     private func showErrorMessage() {
         let alert = UIAlertController(title: "Error", message: viewModel.errorMessage(), preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default) { _ in
@@ -103,6 +109,8 @@ class RepositorySelectorViewController: UIViewController {
         Navigation.push(page: .starGazerList, with: starGazerListViewModel, using: navigationController)
     }
 }
+
+// MARK: - TextField Delegate
 
 extension RepositorySelectorViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
