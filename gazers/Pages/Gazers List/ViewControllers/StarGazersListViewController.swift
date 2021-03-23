@@ -23,7 +23,7 @@ class StarGazersListViewController: BaseViewController {
     private var compositeDisposable = CompositeDisposable()
     private var networkMonitorService: NetworkMonitorService? = AssemblerWrapper.shared.resolve(NetworkMonitorService.self)
 
-    private var gazersViewModel: StarGazersListViewModel {
+    var gazersViewModel: StarGazersListViewModel {
         if viewModel is StarGazersListViewModel {
             return viewModel as! StarGazersListViewModel
         } else {
@@ -56,6 +56,8 @@ class StarGazersListViewController: BaseViewController {
     }
 
     deinit {
+        OSLogger.uiLog(message: "Deiniting \(String(describing: StarGazersListViewController.self)) and disposing subscriptions")
+        
         if (!compositeDisposable.isDisposed) {
             compositeDisposable.dispose()
         }
