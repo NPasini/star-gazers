@@ -8,7 +8,7 @@
 import UIKit
 import OSLogger
 
-class RepositorySelectorViewController: UIViewController {
+class RepositorySelectorViewController: BaseViewController {
 
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var repoDetailsView: UIView!
@@ -17,9 +17,21 @@ class RepositorySelectorViewController: UIViewController {
     @IBOutlet weak var repoOwnerText: UITextField!
 
     private var activeTextField: UITextField?
-    private var viewModel: RepositorySelectorViewModel = RepositorySelectorViewModel()
+
+    var repositoryViewModel: RepositorySelectorViewModel {
+        if viewModel is RepositorySelectorViewModel {
+            return viewModel as! RepositorySelectorViewModel
+        } else {
+            fatalError("The View Model has the wrong type")
+        }
+    }
 
     // MARK: - Life Cycle
+
+    required init?(coder: NSCoder) {
+        let viewModel = RepositorySelectorViewModel()
+        super.init(coder: coder, viewModel: viewModel)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,7 +117,7 @@ class RepositorySelectorViewController: UIViewController {
 
     private func navigateToGazerListPage() {
         OSLogger.uiLog(message: "Navigating to Star Gazers list page", access: .public, type: .debug)
-        let starGazerListViewModel = StarGazersListViewModel(repositoryName: viewModel.repositoryName, repositoryOwner: viewModel.repositoryOwner)
+        let starGazerListViewModel = StarGazersListViewModel(repositoryName: repositoryViewModel.repositoryName, repositoryOwner: repositoryViewModel.repositoryOwner)
         Navigation.push(page: .starGazerList, with: starGazerListViewModel, using: navigationController)
     }
 }
@@ -131,12 +143,12 @@ extension RepositorySelectorViewController: UITextFieldDelegate {
         if let text = textField.text {
             if textField == repoNameText {
                 OSLogger.uiLog(message: "Set repo name to: \(text)", access: .public, type: .debug)
-                viewModel.setRepositoryName(text)
+                repositoryViewModel.setRepositoryName(text)
             }
 
             if textField == repoOwnerText {
                 OSLogger.uiLog(message: "Set repo owner to: \(text)", access: .public, type: .debug)
-                viewModel.setRepositoryOwner(text)
+                repositoryViewModel.setRepositoryOwner(text)
             }
         }
     }

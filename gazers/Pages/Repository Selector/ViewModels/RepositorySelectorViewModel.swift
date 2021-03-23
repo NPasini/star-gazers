@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RepositorySelectorViewModel: ViewModel {
+class RepositorySelectorViewModel: ViewModel {
 
     private(set) var repositoryName: String
     private(set) var repositoryOwner: String
@@ -17,11 +17,11 @@ struct RepositorySelectorViewModel: ViewModel {
         repositoryOwner = ""
     }
 
-    mutating func setRepositoryName(_ name: String) {
+    func setRepositoryName(_ name: String) {
         repositoryName = name
     }
 
-    mutating func setRepositoryOwner(_ owner: String) {
+    func setRepositoryOwner(_ owner: String) {
         repositoryOwner = owner
     }
 
