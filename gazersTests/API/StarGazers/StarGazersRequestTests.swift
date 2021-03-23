@@ -13,6 +13,7 @@ import Foundation
 
 class StarGazersRequestTests: QuickSpec {
     private let page: Int = 1
+    private let perPageItems: Int = 25
     private let repositoryName: String = "testName"
     private let repositoryOwner: String = "testOwner"
 
@@ -20,7 +21,7 @@ class StarGazersRequestTests: QuickSpec {
         context("Testing the Star Gazers API request"){
             describe("when is created specifying the page an istance of the request"){
                 it("should contain correct endpoint and parameters"){
-                    let request = StarGazersRequest(repositoryName: self.repositoryName, owner: self.repositoryOwner, page: self.page)
+                    let request = StarGazersRequest(repositoryName: self.repositoryName, owner: self.repositoryOwner, page: self.page, perPageItems: self.perPageItems)
 
                     expect(request.host).to(equal("api.github.com"))
                     expect(request.version).to(beNil())
@@ -34,7 +35,7 @@ class StarGazersRequestTests: QuickSpec {
                     }
 
                     if let perPageParameter = request.queryParameters?[request.perPageKey] as? Int {
-                        expect(perPageParameter).to(equal(request.perPageItems))
+                        expect(perPageParameter).to(equal(self.perPageItems))
                     } else {
                         fail("Per page parameter not present")
                     }
