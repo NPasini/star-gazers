@@ -17,6 +17,7 @@ class RepositorySelectorViewController: BaseViewController {
     @IBOutlet weak var repoOwnerText: UITextField!
 
     private var activeTextField: UITextField?
+    private let navigationService: NavigationService?
 
     var repositoryViewModel: RepositorySelectorViewModel {
         if viewModel is RepositorySelectorViewModel {
@@ -30,6 +31,8 @@ class RepositorySelectorViewController: BaseViewController {
 
     required init?(coder: NSCoder) {
         let viewModel = RepositorySelectorViewModel()
+        navigationService = AssemblerWrapper.shared.resolve(NavigationService.self)
+
         super.init(coder: coder, viewModel: viewModel)
     }
 
@@ -118,7 +121,7 @@ class RepositorySelectorViewController: BaseViewController {
     private func navigateToGazerListPage() {
         OSLogger.uiLog(message: "Navigating to Star Gazers list page", access: .public, type: .debug)
         let starGazerListViewModel = StarGazersListViewModel(repositoryName: repositoryViewModel.repositoryName, repositoryOwner: repositoryViewModel.repositoryOwner)
-        Navigation.push(page: .starGazerList, with: starGazerListViewModel, using: navigationController)
+        navigationService?.push(page: .starGazerList, with: starGazerListViewModel, using: navigationController)
     }
 }
 
