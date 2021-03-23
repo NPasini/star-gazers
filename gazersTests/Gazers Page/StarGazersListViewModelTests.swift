@@ -54,12 +54,30 @@ class StarGazersListViewModelTests: QuickSpec {
                     self.viewModel.getStarGazers()
 
                     // Wait first page data from repository are retrieved
-                    expect(self.viewModel.gazersDataSource.value.count).toEventually(beGreaterThan(0), timeout: self.timeout, pollInterval: self.pollingTimer, description: nil)
+                    expect(self.viewModel.gazersDataSource.value).toEventually(equal(self.firstPageGazers), timeout: self.timeout, pollInterval: self.pollingTimer, description: nil)
 
                     self.viewModel.getStarGazers()
 
                     expect(self.viewModel.isValid()).to(equal(true))
                     expect(self.viewModel.errorMessage()).to(equal(""))
+                    expect(self.viewModel.gazersDataSource.value).toEventually(equal(self.firstPageGazers + self.secondPageGazers), timeout: self.timeout, pollInterval: self.pollingTimer, description: nil)
+                    expect(self.viewModel.stopFetchingData.value).toEventually(equal(true), timeout: self.timeout, pollInterval: self.pollingTimer, description: nil)
+                }
+
+                it("should not fail when asking for new data once there are no more gazers") {
+                    self.viewModel.getStarGazers()
+
+                    // Wait first page data from repository are retrieved
+                    expect(self.viewModel.gazersDataSource.value).toEventually(equal(self.firstPageGazers), timeout: self.timeout, pollInterval: self.pollingTimer, description: nil)
+
+                    self.viewModel.getStarGazers()
+
+                    // Wait second page data from repository are retrieved
+                    expect(self.viewModel.gazersDataSource.value).toEventually(equal(self.firstPageGazers + self.secondPageGazers), timeout: self.timeout, pollInterval: self.pollingTimer, description: nil)
+
+                    self.viewModel.getStarGazers()
+
+                    // Wait third page data from repository are retrieved
                     expect(self.viewModel.gazersDataSource.value).toEventually(equal(self.firstPageGazers + self.secondPageGazers), timeout: self.timeout, pollInterval: self.pollingTimer, description: nil)
                     expect(self.viewModel.stopFetchingData.value).toEventually(equal(true), timeout: self.timeout, pollInterval: self.pollingTimer, description: nil)
                 }
