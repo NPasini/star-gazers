@@ -31,6 +31,7 @@
 		A86469FF260A64DE00604FE0 /* AvailableNetowrkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86469FE260A64DE00604FE0 /* AvailableNetowrkAssembly.swift */; };
 		A8646A07260A650400604FE0 /* NotAvailableNetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646A06260A650400604FE0 /* NotAvailableNetworkAssembly.swift */; };
 		A8646A13260A688500604FE0 /* RepositorySelectorViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646A12260A688500604FE0 /* RepositorySelectorViewControllerTests.swift */; };
+		A8646A25260A7A7500604FE0 /* RepositorySelectorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646A24260A7A7500604FE0 /* RepositorySelectorViewModelTests.swift */; };
 		A864ED1F26075F56003E7F21 /* RepositorySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */; };
 		A864ED37260767A5003E7F21 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED36260767A5003E7F21 /* Navigation.swift */; };
 		A864ED3C260767D7003E7F21 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED3B260767D7003E7F21 /* Page.swift */; };
@@ -106,6 +107,7 @@
 		A86469FE260A64DE00604FE0 /* AvailableNetowrkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableNetowrkAssembly.swift; sourceTree = "<group>"; };
 		A8646A06260A650400604FE0 /* NotAvailableNetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAvailableNetworkAssembly.swift; sourceTree = "<group>"; };
 		A8646A12260A688500604FE0 /* RepositorySelectorViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelectorViewControllerTests.swift; sourceTree = "<group>"; };
+		A8646A24260A7A7500604FE0 /* RepositorySelectorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelectorViewModelTests.swift; sourceTree = "<group>"; };
 		A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelectorViewModel.swift; sourceTree = "<group>"; };
 		A864ED36260767A5003E7F21 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		A864ED3B260767D7003E7F21 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				A8646A12260A688500604FE0 /* RepositorySelectorViewControllerTests.swift */,
+				A8646A24260A7A7500604FE0 /* RepositorySelectorViewModelTests.swift */,
 			);
 			path = "Repository Selector Page";
 			sourceTree = "<group>";
@@ -846,6 +849,7 @@
 				A829515C2602AF9800D7357D /* StarGazersResponseTests.swift in Sources */,
 				A808AF4E2602C11100E7FB19 /* TestStarGazersRepository.swift in Sources */,
 				A86469FF260A64DE00604FE0 /* AvailableNetowrkAssembly.swift in Sources */,
+				A8646A25260A7A7500604FE0 /* RepositorySelectorViewModelTests.swift in Sources */,
 				A808AF282602B80C00E7FB19 /* Json.swift in Sources */,
 				A808AF472602C0BD00E7FB19 /* TestRepositortAssembly.swift in Sources */,
 				A86469FA260A64B300604FE0 /* NotAvailableNetworkMonitor.swift in Sources */,

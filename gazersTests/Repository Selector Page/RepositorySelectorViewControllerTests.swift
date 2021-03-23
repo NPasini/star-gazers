@@ -10,7 +10,6 @@
 import UIKit
 import Quick
 import Nimble
-import ReactiveSwift
 
 class RepositorySelectorViewControllerTests: QuickSpec {
 
@@ -41,8 +40,8 @@ class RepositorySelectorViewControllerTests: QuickSpec {
                     expect(self.viewController.repoNameText.delegate).to(be(self.viewController))
                     expect(self.viewController.repoOwnerText.delegate).to(be(self.viewController))
 
-                    expect(self.viewController.repositoryViewModel.isValid).to(equal(false))
-                    expect(self.viewController.repositoryViewModel.errorMessage).toNot(beNil())
+                    expect(self.viewController.repositoryViewModel.isValid()).to(equal(false))
+                    expect(self.viewController.repositoryViewModel.errorMessage()).toNot(beNil())
                     expect(self.viewController.repositoryViewModel.repositoryName).to(equal(""))
                     expect(self.viewController.repositoryViewModel.repositoryOwner).to(equal(""))
                 }
@@ -56,7 +55,7 @@ class RepositorySelectorViewControllerTests: QuickSpec {
 
                     self.viewController.textFieldDidEndEditing(self.viewController.repoOwnerText)
 
-                    expect(self.viewController.repositoryViewModel.isValid).to(equal(false))
+                    expect(self.viewController.repositoryViewModel.isValid()).to(equal(false))
                     expect(self.viewController.repositoryViewModel.repositoryName).to(equal(""))
                     expect(self.viewController.repositoryViewModel.repositoryOwner).to(equal(self.testOwner))
                 }
@@ -70,7 +69,7 @@ class RepositorySelectorViewControllerTests: QuickSpec {
 
                     self.viewController.textFieldDidEndEditing(self.viewController.repoNameText)
 
-                    expect(self.viewController.repositoryViewModel.isValid).to(equal(false))
+                    expect(self.viewController.repositoryViewModel.isValid()).to(equal(false))
                     expect(self.viewController.repositoryViewModel.repositoryOwner).to(equal(""))
                     expect(self.viewController.repositoryViewModel.repositoryName).to(equal(self.testRepository))
                 }
@@ -83,7 +82,7 @@ class RepositorySelectorViewControllerTests: QuickSpec {
                     self.viewController.textFieldDidEndEditing(self.viewController.repoNameText)
                     self.viewController.textFieldDidEndEditing(self.viewController.repoOwnerText)
 
-                    expect(self.viewController.repositoryViewModel.isValid).to(equal(true))
+                    expect(self.viewController.repositoryViewModel.isValid()).to(equal(true))
                     expect(self.viewController.repoOwnerText.text).to(equal(self.testOwner))
                     expect(self.viewController.repoNameText.text).to(equal(self.testRepository))
                 }
