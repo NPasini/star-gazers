@@ -8,10 +8,9 @@
 @testable import gazers
 
 import Swinject
-import Foundation
 
 class TestRepositoriesAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(StarGazersRepositoryService.self) { _, repositoryName, repositoryOwner in return TestStarGazersRepository(repository: repositoryName, owner: repositoryOwner) }
+        container.register(StarGazersRepositoryService.self) { (_, repositoryName: String, repositoryOwner: String, perPageItems: Int) in return TestStarGazersRepository(repository: repositoryName, owner: repositoryOwner, perPageItems: perPageItems) }
     }
 }

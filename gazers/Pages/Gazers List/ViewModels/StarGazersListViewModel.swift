@@ -16,18 +16,19 @@ class StarGazersListViewModel: ViewModel {
 
     private var currentPage: Int
     private var isFetching: Bool
+    private let gazersPerPage: Int
     private var errorString: String
-    private let gazersPerPage: Int = 25
     private let serialDisposable: SerialDisposable
     private let gazersRepository: StarGazersRepositoryService?
     private let stopFetchingPipe: (output: BoolSignal, input: BoolSignal.Observer)
 
     // MARK: - Lyfe Cycle
 
-    init(repositoryName: String, repositoryOwner: String) {
+    init(repositoryName: String, repositoryOwner: String, perPageItems: Int = 25) {
         currentPage = 1
         errorString = ""
         isFetching = false
+        gazersPerPage = perPageItems
         stopFetchingPipe = BoolSignal.pipe()
         gazersDataSource = MutableProperty([])
         serialDisposable = SerialDisposable(nil)
@@ -36,7 +37,11 @@ class StarGazersListViewModel: ViewModel {
     }
 
     deinit {
-        dispose()
+        OSLogger.dataFlowLog(message: "Disposing BeersViewModel", access: .public, type: .debug)
+
+        if (!serialDisposable.isDisposed) {
+            serialDisposable.dispose()
+        }
     }
 
     //MARK: Public Functions
@@ -76,15 +81,6 @@ class StarGazersListViewModel: ViewModel {
             OSLogger.dataFlowLog(message: "Fetching already in progress for page \(currentPage)", access: .public, type: .debug)
         } else if (stopFetchingData.value) {
             OSLogger.dataFlowLog(message: "Fetching stopped because reached end of paged results", access: .public, type: .debug)
-        }
-    }
-
-    //MARK: Private Functions
-    private func dispose() {
-        OSLogger.dataFlowLog(message: "Disposing BeersViewModel", access: .public, type: .debug)
-
-        if (!serialDisposable.isDisposed) {
-            serialDisposable.dispose()
         }
     }
 }

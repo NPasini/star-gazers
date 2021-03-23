@@ -32,3 +32,9 @@ struct Gazer: Decodable {
         avatarUrl = try container.decodeIfPresent(String.self, forKey: .avatar_url)
     }
 }
+
+extension Gazer: Equatable {
+    static func ==(lhs: Gazer, rhs: Gazer) -> Bool {
+        return lhs.id == rhs.id && lhs.name == rhs.name && lhs.avatarUrl == rhs.avatarUrl
+    }
+}
