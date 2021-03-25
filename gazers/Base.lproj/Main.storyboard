@@ -154,18 +154,23 @@
                                 <rect key="frame" x="0.0" y="84" width="414" height="778"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <sections/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="gazersTableView"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFO-zd-Zj0">
                                 <rect key="frame" x="0.0" y="44" width="414" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Messsage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C2-Dj-hPw">
                                         <rect key="frame" x="15" y="10" width="384" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="messageLabel"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="messageView"/>
                                 <constraints>
                                     <constraint firstItem="5C2-Dj-hPw" firstAttribute="centerY" secondItem="OFO-zd-Zj0" secondAttribute="centerY" id="UoH-nn-aZV"/>
                                     <constraint firstAttribute="trailing" secondItem="5C2-Dj-hPw" secondAttribute="trailing" constant="15" id="ZKE-81-ysc"/>

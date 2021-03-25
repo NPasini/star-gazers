@@ -403,6 +403,7 @@
 			children = (
 				A8646B72260CDF6B00604FE0 /* Assemblies */,
 				A8646B71260CDF6300604FE0 /* Repositories */,
+				A8646B88260CEAE600604FE0 /* Services */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -421,6 +422,13 @@
 				A8646B73260CDF8000604FE0 /* MockedRepositoriesAssembly.swift */,
 			);
 			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		A8646B88260CEAE600604FE0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		A864ED1D26075F44003E7F21 /* ViewModels */ = {

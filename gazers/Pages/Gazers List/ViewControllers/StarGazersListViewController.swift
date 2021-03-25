@@ -151,6 +151,7 @@ extension StarGazersListViewController: UITableViewDataSource {
 
         if let cell = tableView.dequeueReusableCell(withIdentifier: StarGazerTableViewCell.identifier, for: indexPath) as? StarGazerTableViewCell {
             cell.configure(with: cellModel)
+            cell.accessibilityIdentifier = "DataCell\(indexPath.row)"
             return cell
         } else {
             return UITableViewCell()
