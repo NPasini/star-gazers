@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RepositorySelectorViewModel: ViewModel {
+class RepositorySelectorViewModel: RepositorySelectorViewModelProtocol {
 
     private(set) var repositoryName: String
     private(set) var repositoryOwner: String

@@ -9,7 +9,7 @@ import OSLogger
 import Foundation
 import ReactiveSwift
 
-class StarGazersListViewModel: ViewModel {
+final class StarGazersListViewModel: StarGazersListViewModelProtocol {
 
     let stopFetchingData: Property<Bool>
     let gazersDataSource: MutableProperty<[Gazer]>

@@ -17,24 +17,17 @@ class RepositorySelectorViewController: BaseViewController {
     @IBOutlet weak var repoOwnerText: UITextField!
 
     private var activeTextField: UITextField?
-    private let navigationService: NavigationService?
+    private let navigationService: NavigationService? = AssemblerWrapper.shared.resolve(NavigationService.self)
 
-    var repositoryViewModel: RepositorySelectorViewModel {
-        if viewModel is RepositorySelectorViewModel {
-            return viewModel as! RepositorySelectorViewModel
+    var repositoryViewModel: RepositorySelectorViewModelProtocol {
+        if viewModel is RepositorySelectorViewModelProtocol {
+            return viewModel as! RepositorySelectorViewModelProtocol
         } else {
             fatalError("The View Model has the wrong type")
         }
     }
 
     // MARK: - Life Cycle
-
-    required init?(coder: NSCoder) {
-        let viewModel = RepositorySelectorViewModel()
-        navigationService = AssemblerWrapper.shared.resolve(NavigationService.self)
-
-        super.init(coder: coder, viewModel: viewModel)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,7 +113,7 @@ class RepositorySelectorViewController: BaseViewController {
 
     private func navigateToGazerListPage() {
         OSLogger.uiLog(message: "Navigating to Star Gazers list page", access: .public, type: .debug)
-        let starGazerListViewModel = StarGazersListViewModel(repositoryName: repositoryViewModel.repositoryName, repositoryOwner: repositoryViewModel.repositoryOwner)
+        let starGazerListViewModel = AssemblerWrapper.shared.resolve(StarGazersListViewModelProtocol.self, arguments: repositoryViewModel.repositoryName, repositoryViewModel.repositoryOwner)
         navigationService?.push(page: .starGazerList, with: starGazerListViewModel, using: navigationController)
     }
 }

@@ -23,9 +23,9 @@ class StarGazersListViewController: BaseViewController {
     private var compositeDisposable = CompositeDisposable()
     private var networkMonitorService: NetworkMonitorService? = AssemblerWrapper.shared.resolve(NetworkMonitorService.self)
 
-    var gazersViewModel: StarGazersListViewModel {
-        if viewModel is StarGazersListViewModel {
-            return viewModel as! StarGazersListViewModel
+    var gazersViewModel: StarGazersListViewModelProtocol {
+        if viewModel is StarGazersListViewModelProtocol {
+            return viewModel as! StarGazersListViewModelProtocol
         } else {
             fatalError("The View Model has the wrong type")
         }
