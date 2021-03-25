@@ -10,4 +10,7 @@ import Foundation
 protocol RepositorySelectorViewModelProtocol: ViewModel {
     var repositoryName: String { get }
     var repositoryOwner: String { get }
+
+    func setRepositoryName(_ name: String)
+    func setRepositoryOwner(_ owner: String)
 }
