@@ -29,6 +29,26 @@ class AssemblerWrapper {
         }
     }
 
+    func resolve<Service, Arg1>(_ service: Service.Type, argument: Arg1) -> Service? {
+        if let container = self.innerAssembler.resolver as? Container {
+            let threadSafeContainer: Resolver = container.synchronize()
+            return threadSafeContainer.resolve(service.self, argument: argument)
+        } else {
+            OSLogger.dependencyInjectionLog(message: "Failed to resolve service: \(String(describing: service))", access: .public, type: .debug)
+            return nil
+        }
+    }
+
+    func resolve<Service, Arg1, Arg2>(_ service: Service.Type, arguments: Arg1, _ arg2: Arg2) -> Service? {
+        if let container = self.innerAssembler.resolver as? Container {
+            let threadSafeContainer: Resolver = container.synchronize()
+            return threadSafeContainer.resolve(service.self, arguments: arguments, arg2)
+        } else {
+            OSLogger.dependencyInjectionLog(message: "Failed to resolve service: \(String(describing: service))", access: .public, type: .debug)
+            return nil
+        }
+    }
+
     func resolve<Service, Arg1, Arg2, Arg3>(_ service: Service.Type, arguments: Arg1, _ arg2: Arg2, _ arg3: Arg3) -> Service? {
         if let container = self.innerAssembler.resolver as? Container {
             let threadSafeContainer: Resolver = container.synchronize()
