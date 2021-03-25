@@ -16,7 +16,8 @@ class RepositorySelecectorViewControllerTests: XCTestCase {
     override func setUp() {
         app = XCUIApplication()
 
-        app.launchArguments = ["-UITesting", "true", "-testPage", "repositorySelector"]
+        app.launchArguments = ["-UITesting", "true"]
+        app.launchEnvironment = ["testPage": "repositorySelector"]
 
         app.launch()
     }

@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         assemblies.append(ViewModelsAssembly())
 
         if UserDefaults.standard.bool(forKey: "UITesting") {
-            assemblies.append(RepositoriesAssembly())
+            assemblies.append(MockedRepositoriesAssembly())
         } else {
             assemblies.append(RepositoriesAssembly())
         }

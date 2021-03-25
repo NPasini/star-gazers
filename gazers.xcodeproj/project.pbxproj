@@ -41,9 +41,10 @@
 		A8646AD7260CCB6600604FE0 /* StarGazersListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646AD6260CCB6600604FE0 /* StarGazersListViewControllerTests.swift */; };
 		A8646AE6260CCC9200604FE0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED4126076837003E7F21 /* ViewModel.swift */; };
 		A8646B2C260CD74500604FE0 /* StarGazersListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B2B260CD74500604FE0 /* StarGazersListViewModelProtocol.swift */; };
-		A8646B36260CD7C300604FE0 /* StarGazersListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B2B260CD74500604FE0 /* StarGazersListViewModelProtocol.swift */; };
 		A8646B49260CDA9500604FE0 /* ViewModelsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B48260CDA9500604FE0 /* ViewModelsAssembly.swift */; };
 		A8646B4E260CDB1900604FE0 /* RepositorySelectorViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B4D260CDB1900604FE0 /* RepositorySelectorViewModelProtocol.swift */; };
+		A8646B6A260CDECE00604FE0 /* MockedStarGazersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B62260CDECC00604FE0 /* MockedStarGazersRepository.swift */; };
+		A8646B7B260CDFCC00604FE0 /* MockedRepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B73260CDF8000604FE0 /* MockedRepositoriesAssembly.swift */; };
 		A864ED1F26075F56003E7F21 /* RepositorySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */; };
 		A864ED37260767A5003E7F21 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED36260767A5003E7F21 /* Navigation.swift */; };
 		A864ED3C260767D7003E7F21 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED3B260767D7003E7F21 /* Page.swift */; };
@@ -130,6 +131,8 @@
 		A8646B2B260CD74500604FE0 /* StarGazersListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersListViewModelProtocol.swift; sourceTree = "<group>"; };
 		A8646B48260CDA9500604FE0 /* ViewModelsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelsAssembly.swift; sourceTree = "<group>"; };
 		A8646B4D260CDB1900604FE0 /* RepositorySelectorViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelectorViewModelProtocol.swift; sourceTree = "<group>"; };
+		A8646B62260CDECC00604FE0 /* MockedStarGazersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedStarGazersRepository.swift; sourceTree = "<group>"; };
+		A8646B73260CDF8000604FE0 /* MockedRepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedRepositoriesAssembly.swift; sourceTree = "<group>"; };
 		A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelectorViewModel.swift; sourceTree = "<group>"; };
 		A864ED36260767A5003E7F21 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		A864ED3B260767D7003E7F21 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
@@ -395,6 +398,31 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
+		A8646B61260CDEAA00604FE0 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A8646B72260CDF6B00604FE0 /* Assemblies */,
+				A8646B71260CDF6300604FE0 /* Repositories */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A8646B71260CDF6300604FE0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A8646B62260CDECC00604FE0 /* MockedStarGazersRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A8646B72260CDF6B00604FE0 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				A8646B73260CDF8000604FE0 /* MockedRepositoriesAssembly.swift */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
 		A864ED1D26075F44003E7F21 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +496,7 @@
 				A822C6F32602194B00B8A0E8 /* Dependency Injection */,
 				A8778E972601644B005EBB7A /* LaunchScreen.storyboard */,
 				A8778E922601644A005EBB7A /* Main.storyboard */,
+				A8646B61260CDEAA00604FE0 /* Mocks */,
 				A8778EE7260168E6005EBB7A /* Models */,
 				A8CDF3D92607AF580094BACB /* Pages */,
 				A8CDF439260895710094BACB /* Services */,
@@ -869,6 +898,7 @@
 				A8CDF43B260895940094BACB /* NetworkMonitor.swift in Sources */,
 				A8646B4E260CDB1900604FE0 /* RepositorySelectorViewModelProtocol.swift in Sources */,
 				A8646B49260CDA9500604FE0 /* ViewModelsAssembly.swift in Sources */,
+				A8646B6A260CDECE00604FE0 /* MockedStarGazersRepository.swift in Sources */,
 				A8CDF4032607D67F0094BACB /* UIView+Extensions.swift in Sources */,
 				A8778F0126016DB6005EBB7A /* StarGazersRepository.swift in Sources */,
 				A8778EE32601663F005EBB7A /* StarGazersResponse.swift in Sources */,
@@ -883,6 +913,7 @@
 				A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */,
 				A8646A3A260AA51500604FE0 /* NavigationService.swift in Sources */,
 				A822C71326021AAC00B8A0E8 /* RepositortAssembly.swift in Sources */,
+				A8646B7B260CDFCC00604FE0 /* MockedRepositoriesAssembly.swift in Sources */,
 				A8CDF44626089E4F0094BACB /* TypeAliases.swift in Sources */,
 				A8CDF40B2607D7D60094BACB /* StarGazerTableViewCell.swift in Sources */,
 				A8CDF4352608953E0094BACB /* AppServicesAssembly.swift in Sources */,
@@ -918,7 +949,6 @@
 			files = (
 				A8778EAF2601644B005EBB7A /* RepositorySelecectorViewControllerTests.swift in Sources */,
 				A8646AE6260CCC9200604FE0 /* ViewModel.swift in Sources */,
-				A8646B36260CD7C300604FE0 /* StarGazersListViewModelProtocol.swift in Sources */,
 				A8646AD7260CCB6600604FE0 /* StarGazersListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
