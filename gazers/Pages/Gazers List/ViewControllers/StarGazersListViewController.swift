@@ -47,6 +47,10 @@ class StarGazersListViewController: BaseViewController {
                 self?.shouldShowNetworkUnavailableMessage(!connectionAvailable)
             }
         })
+
+        compositeDisposable += gazersViewModel.errorSignal.producer.filter({ $0 == true }).observe(on: UIScheduler()).on(value: { [weak self] _ in
+            self?.showError()
+        }).start()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -138,6 +142,16 @@ class StarGazersListViewController: BaseViewController {
                 self.view.layoutIfNeeded()
             }
         }
+    }
+
+    private func showError() {
+        let alert = UIAlertController(title: "Error", message: viewModel.errorMessage(), preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { _ in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(action)
+
+        navigationController?.present(alert, animated: true, completion: nil)
     }
 }
 
