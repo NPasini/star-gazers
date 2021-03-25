@@ -1,11 +1,9 @@
 //
 //  AvailableNetworkMonitor.swift
-//  gazersTests
+//  gazers
 //
-//  Created by Nicolò Pasini on 23/03/21.
+//  Created by Nicolò Pasini on 25/03/21.
 //
-
-@testable import gazers
 
 import ReactiveSwift
 

@@ -26,10 +26,6 @@
 		A822C71926021FFD00B8A0E8 /* StarGazersRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822C71826021FFD00B8A0E8 /* StarGazersRepositoryService.swift */; };
 		A82951502602AF5400D7357D /* StarGazersRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A829514F2602AF5400D7357D /* StarGazersRequestTests.swift */; };
 		A829515C2602AF9800D7357D /* StarGazersResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A829515B2602AF9800D7357D /* StarGazersResponseTests.swift */; };
-		A86469F5260A648900604FE0 /* AvailableNetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86469F4260A648900604FE0 /* AvailableNetworkMonitor.swift */; };
-		A86469FA260A64B300604FE0 /* NotAvailableNetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86469F9260A64B300604FE0 /* NotAvailableNetworkMonitor.swift */; };
-		A86469FF260A64DE00604FE0 /* AvailableNetowrkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86469FE260A64DE00604FE0 /* AvailableNetowrkAssembly.swift */; };
-		A8646A07260A650400604FE0 /* NotAvailableNetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646A06260A650400604FE0 /* NotAvailableNetworkAssembly.swift */; };
 		A8646A13260A688500604FE0 /* RepositorySelectorViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646A12260A688500604FE0 /* RepositorySelectorViewControllerTests.swift */; };
 		A8646A25260A7A7500604FE0 /* RepositorySelectorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646A24260A7A7500604FE0 /* RepositorySelectorViewModelTests.swift */; };
 		A8646A2A260A8F4300604FE0 /* StarGazersListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646A29260A8F4300604FE0 /* StarGazersListViewModelTests.swift */; };
@@ -44,7 +40,12 @@
 		A8646B49260CDA9500604FE0 /* ViewModelsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B48260CDA9500604FE0 /* ViewModelsAssembly.swift */; };
 		A8646B4E260CDB1900604FE0 /* RepositorySelectorViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B4D260CDB1900604FE0 /* RepositorySelectorViewModelProtocol.swift */; };
 		A8646B6A260CDECE00604FE0 /* MockedStarGazersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B62260CDECC00604FE0 /* MockedStarGazersRepository.swift */; };
-		A8646B7B260CDFCC00604FE0 /* MockedRepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B73260CDF8000604FE0 /* MockedRepositoriesAssembly.swift */; };
+		A8646B8A260CEB3A00604FE0 /* AvailableNetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B89260CEB3A00604FE0 /* AvailableNetworkMonitor.swift */; };
+		A8646B8F260CEB5300604FE0 /* NotAvailableNetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B8E260CEB5300604FE0 /* NotAvailableNetworkMonitor.swift */; };
+		A8646B97260CEC4700604FE0 /* MockedServicesWithAvailableNetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646B96260CEC4700604FE0 /* MockedServicesWithAvailableNetworkAssembly.swift */; };
+		A8646BA2260CEC7700604FE0 /* MockedServicesWithNotAvailableNetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646BA1260CEC7700604FE0 /* MockedServicesWithNotAvailableNetworkAssembly.swift */; };
+		A8646BC6260CEE9200604FE0 /* StarGazersListViewControllerNetworkNotAvailableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646BC5260CEE9200604FE0 /* StarGazersListViewControllerNetworkNotAvailableTests.swift */; };
+		A8646BCE260CEF7000604FE0 /* EmptyStarGazersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646BCD260CEF7000604FE0 /* EmptyStarGazersRepository.swift */; };
 		A864ED1F26075F56003E7F21 /* RepositorySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */; };
 		A864ED37260767A5003E7F21 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED36260767A5003E7F21 /* Navigation.swift */; };
 		A864ED3C260767D7003E7F21 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED3B260767D7003E7F21 /* Page.swift */; };
@@ -115,10 +116,6 @@
 		A822C71826021FFD00B8A0E8 /* StarGazersRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRepositoryService.swift; sourceTree = "<group>"; };
 		A829514F2602AF5400D7357D /* StarGazersRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRequestTests.swift; sourceTree = "<group>"; };
 		A829515B2602AF9800D7357D /* StarGazersResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersResponseTests.swift; sourceTree = "<group>"; };
-		A86469F4260A648900604FE0 /* AvailableNetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableNetworkMonitor.swift; sourceTree = "<group>"; };
-		A86469F9260A64B300604FE0 /* NotAvailableNetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAvailableNetworkMonitor.swift; sourceTree = "<group>"; };
-		A86469FE260A64DE00604FE0 /* AvailableNetowrkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableNetowrkAssembly.swift; sourceTree = "<group>"; };
-		A8646A06260A650400604FE0 /* NotAvailableNetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAvailableNetworkAssembly.swift; sourceTree = "<group>"; };
 		A8646A12260A688500604FE0 /* RepositorySelectorViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelectorViewControllerTests.swift; sourceTree = "<group>"; };
 		A8646A24260A7A7500604FE0 /* RepositorySelectorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelectorViewModelTests.swift; sourceTree = "<group>"; };
 		A8646A29260A8F4300604FE0 /* StarGazersListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersListViewModelTests.swift; sourceTree = "<group>"; };
@@ -132,7 +129,12 @@
 		A8646B48260CDA9500604FE0 /* ViewModelsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelsAssembly.swift; sourceTree = "<group>"; };
 		A8646B4D260CDB1900604FE0 /* RepositorySelectorViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelectorViewModelProtocol.swift; sourceTree = "<group>"; };
 		A8646B62260CDECC00604FE0 /* MockedStarGazersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedStarGazersRepository.swift; sourceTree = "<group>"; };
-		A8646B73260CDF8000604FE0 /* MockedRepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedRepositoriesAssembly.swift; sourceTree = "<group>"; };
+		A8646B89260CEB3A00604FE0 /* AvailableNetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableNetworkMonitor.swift; sourceTree = "<group>"; };
+		A8646B8E260CEB5300604FE0 /* NotAvailableNetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAvailableNetworkMonitor.swift; sourceTree = "<group>"; };
+		A8646B96260CEC4700604FE0 /* MockedServicesWithAvailableNetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedServicesWithAvailableNetworkAssembly.swift; sourceTree = "<group>"; };
+		A8646BA1260CEC7700604FE0 /* MockedServicesWithNotAvailableNetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedServicesWithNotAvailableNetworkAssembly.swift; sourceTree = "<group>"; };
+		A8646BC5260CEE9200604FE0 /* StarGazersListViewControllerNetworkNotAvailableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersListViewControllerNetworkNotAvailableTests.swift; sourceTree = "<group>"; };
+		A8646BCD260CEF7000604FE0 /* EmptyStarGazersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStarGazersRepository.swift; sourceTree = "<group>"; };
 		A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelectorViewModel.swift; sourceTree = "<group>"; };
 		A864ED36260767A5003E7F21 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		A864ED3B260767D7003E7F21 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
@@ -244,8 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				A8646A4C260AA78A00604FE0 /* AppServicesAssembly.swift */,
-				A86469FE260A64DE00604FE0 /* AvailableNetowrkAssembly.swift */,
-				A8646A06260A650400604FE0 /* NotAvailableNetworkAssembly.swift */,
 				A808AF462602C0BD00E7FB19 /* TestRepositortAssembly.swift */,
 			);
 			path = Assemblies;
@@ -264,8 +264,6 @@
 		A808AF5A260637C300E7FB19 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A86469F4260A648900604FE0 /* AvailableNetworkMonitor.swift */,
-				A86469F9260A64B300604FE0 /* NotAvailableNetworkMonitor.swift */,
 				A8646A41260AA6D500604FE0 /* TestNavigation.swift */,
 				A808AF4D2602C11100E7FB19 /* TestStarGazersRepository.swift */,
 			);
@@ -369,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				A8646AD6260CCB6600604FE0 /* StarGazersListViewControllerTests.swift */,
+				A8646BC5260CEE9200604FE0 /* StarGazersListViewControllerNetworkNotAvailableTests.swift */,
 			);
 			path = "Gazers List";
 			sourceTree = "<group>";
@@ -411,6 +410,7 @@
 		A8646B71260CDF6300604FE0 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				A8646BCD260CEF7000604FE0 /* EmptyStarGazersRepository.swift */,
 				A8646B62260CDECC00604FE0 /* MockedStarGazersRepository.swift */,
 			);
 			path = Repositories;
@@ -419,7 +419,8 @@
 		A8646B72260CDF6B00604FE0 /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
-				A8646B73260CDF8000604FE0 /* MockedRepositoriesAssembly.swift */,
+				A8646B96260CEC4700604FE0 /* MockedServicesWithAvailableNetworkAssembly.swift */,
+				A8646BA1260CEC7700604FE0 /* MockedServicesWithNotAvailableNetworkAssembly.swift */,
 			);
 			path = Assemblies;
 			sourceTree = "<group>";
@@ -427,6 +428,8 @@
 		A8646B88260CEAE600604FE0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A8646B89260CEB3A00604FE0 /* AvailableNetworkMonitor.swift */,
+				A8646B8E260CEB5300604FE0 /* NotAvailableNetworkMonitor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -891,9 +894,13 @@
 			files = (
 				A8646B2C260CD74500604FE0 /* StarGazersListViewModelProtocol.swift in Sources */,
 				A8CDF3EF2607BA7B0094BACB /* Colors.swift in Sources */,
+				A8646B8A260CEB3A00604FE0 /* AvailableNetworkMonitor.swift in Sources */,
 				A8778EFB26016D16005EBB7A /* NetworkError.swift in Sources */,
+				A8646B8F260CEB5300604FE0 /* NotAvailableNetworkMonitor.swift in Sources */,
 				A8CDF3E22607AFE10094BACB /* StarGazersListViewModel.swift in Sources */,
 				A864ED3C260767D7003E7F21 /* Page.swift in Sources */,
+				A8646BCE260CEF7000604FE0 /* EmptyStarGazersRepository.swift in Sources */,
+				A8646B97260CEC4700604FE0 /* MockedServicesWithAvailableNetworkAssembly.swift in Sources */,
 				A8778EF626016CE7005EBB7A /* GazerError.swift in Sources */,
 				A8FA925C2607ABBE008E1A4D /* BaseViewController.swift in Sources */,
 				A8CDF430260895140094BACB /* NetworkMonitorService.swift in Sources */,
@@ -918,10 +925,10 @@
 				A8FA92762607AD69008E1A4D /* StarGazersListViewController.swift in Sources */,
 				A8646A96260BE2B000604FE0 /* SceneDelegate+UITests.swift in Sources */,
 				A8CDF4222607E9090094BACB /* UITableViewCell+Extensions.swift in Sources */,
+				A8646BA2260CEC7700604FE0 /* MockedServicesWithNotAvailableNetworkAssembly.swift in Sources */,
 				A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */,
 				A8646A3A260AA51500604FE0 /* NavigationService.swift in Sources */,
 				A822C71326021AAC00B8A0E8 /* RepositortAssembly.swift in Sources */,
-				A8646B7B260CDFCC00604FE0 /* MockedRepositoriesAssembly.swift in Sources */,
 				A8CDF44626089E4F0094BACB /* TypeAliases.swift in Sources */,
 				A8CDF40B2607D7D60094BACB /* StarGazerTableViewCell.swift in Sources */,
 				A8CDF4352608953E0094BACB /* AppServicesAssembly.swift in Sources */,
@@ -933,19 +940,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A808AF6326063B5D00E7FB19 /* TestGazers.swift in Sources */,
-				A86469F5260A648900604FE0 /* AvailableNetworkMonitor.swift in Sources */,
 				A8646A42260AA6D500604FE0 /* TestNavigation.swift in Sources */,
 				A829515C2602AF9800D7357D /* StarGazersResponseTests.swift in Sources */,
 				A808AF4E2602C11100E7FB19 /* TestStarGazersRepository.swift in Sources */,
-				A86469FF260A64DE00604FE0 /* AvailableNetowrkAssembly.swift in Sources */,
 				A8646A25260A7A7500604FE0 /* RepositorySelectorViewModelTests.swift in Sources */,
 				A8646A2A260A8F4300604FE0 /* StarGazersListViewModelTests.swift in Sources */,
 				A808AF282602B80C00E7FB19 /* Json.swift in Sources */,
 				A8646A4D260AA78A00604FE0 /* AppServicesAssembly.swift in Sources */,
 				A808AF472602C0BD00E7FB19 /* TestRepositortAssembly.swift in Sources */,
-				A86469FA260A64B300604FE0 /* NotAvailableNetworkMonitor.swift in Sources */,
 				A8646A2F260A9F1C00604FE0 /* StarGazersListViewControllerTests.swift in Sources */,
-				A8646A07260A650400604FE0 /* NotAvailableNetworkAssembly.swift in Sources */,
 				A82951502602AF5400D7357D /* StarGazersRequestTests.swift in Sources */,
 				A8646A13260A688500604FE0 /* RepositorySelectorViewControllerTests.swift in Sources */,
 			);
@@ -956,6 +959,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8778EAF2601644B005EBB7A /* RepositorySelecectorViewControllerTests.swift in Sources */,
+				A8646BC6260CEE9200604FE0 /* StarGazersListViewControllerNetworkNotAvailableTests.swift in Sources */,
 				A8646AE6260CCC9200604FE0 /* ViewModel.swift in Sources */,
 				A8646AD7260CCB6600604FE0 /* StarGazersListViewControllerTests.swift in Sources */,
 			);
