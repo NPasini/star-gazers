@@ -35,12 +35,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupDependencyInjection() {
         var assemblies: [Assembly] = []
 
-        assemblies.append(AppServicesAssembly())
         assemblies.append(ViewModelsAssembly())
 
         if UserDefaults.standard.bool(forKey: "UITesting") {
-            assemblies.append(MockedRepositoriesAssembly())
+            if UserDefaults.standard.bool(forKey: "networkNotAvailable") {
+                assemblies.append(MockedServicesWithNotAvailableNetworkAssembly())
+            } else {
+                assemblies.append(MockedServicesWithAvailableNetworkAssembly())
+            }
         } else {
+            assemblies.append(AppServicesAssembly())
             assemblies.append(RepositoriesAssembly())
         }
 

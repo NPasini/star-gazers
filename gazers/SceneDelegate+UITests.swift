@@ -12,9 +12,8 @@ extension SceneDelegate {
 
         var page: Page?
         var viewModel: ViewModel?
-        let environment = ProcessInfo.processInfo.environment
 
-        guard let testPage = environment["testPage"] else { return }
+        guard let testPage = ProcessInfo.processInfo.environment["testPage"] else { return }
 
         switch testPage {
         case "starGazerList":
