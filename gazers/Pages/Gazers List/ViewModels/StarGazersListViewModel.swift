@@ -11,6 +11,7 @@ import ReactiveSwift
 
 final class StarGazersListViewModel: StarGazersListViewModelProtocol {
 
+    let errorSignal: Property<Bool>
     let stopFetchingData: Property<Bool>
     let gazersDataSource: MutableProperty<[Gazer]>
 
@@ -20,6 +21,7 @@ final class StarGazersListViewModel: StarGazersListViewModelProtocol {
     private var errorString: String
     private let serialDisposable: SerialDisposable
     private let gazersRepository: StarGazersRepositoryService?
+    private let errorSignalPipe: (output: VoidSignal, input: VoidSignal.Observer)
     private let stopFetchingPipe: (output: BoolSignal, input: BoolSignal.Observer)
 
     // MARK: - Lyfe Cycle
@@ -29,10 +31,12 @@ final class StarGazersListViewModel: StarGazersListViewModelProtocol {
         errorString = ""
         isFetching = false
         gazersPerPage = perPageItems
+        errorSignalPipe = VoidSignal.pipe()
         stopFetchingPipe = BoolSignal.pipe()
         gazersDataSource = MutableProperty([])
         serialDisposable = SerialDisposable(nil)
         stopFetchingData = Property(initial: false, then: stopFetchingPipe.output)
+        errorSignal = Property(initial: false, then: errorSignalPipe.output.map({ true }))
         gazersRepository = AssemblerWrapper.shared.resolve(StarGazersRepositoryService.self, arguments: repositoryName, repositoryOwner, gazersPerPage)
     }
 
@@ -63,12 +67,14 @@ final class StarGazersListViewModel: StarGazersListViewModelProtocol {
                 serialDisposable.inner = gazersRepository.getGazers(page: currentPage).on(failed: { [weak self] (error: NSError) in
                     self?.isFetching = false
                     self?.errorString = "An error occurred while retrieving data"
+                    self?.stopFetchingPipe.input.send(value: true)
+                    self?.errorSignalPipe.input.send(value: ())
                 }, completed: { [weak self] in
                     self?.currentPage += 1
                     self?.isFetching = false
                 }, value: { [weak self] (newGazers: [Gazer]) in
                     if let perPageCount = self?.gazersPerPage {
-                        let endOfFetchingReachedValue = newGazers.count < perPageCount ? true : false
+                        let endOfFetchingReachedValue = (newGazers.count < perPageCount || newGazers.count == 0) ? true : false
                         self?.stopFetchingPipe.input.send(value: endOfFetchingReachedValue)
                     }
 

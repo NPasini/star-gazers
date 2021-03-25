@@ -7,4 +7,5 @@
 
 import ReactiveSwift
 
+typealias VoidSignal = Signal<Void, Never>
 typealias BoolSignal = Signal<Bool, Never>

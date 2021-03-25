@@ -8,6 +8,8 @@
 import ReactiveSwift
 
 protocol StarGazersListViewModelProtocol: ViewModel {
+
+    var errorSignal: Property<Bool> { get }
     var stopFetchingData: Property<Bool> { get }
     var gazersDataSource: MutableProperty<[Gazer]> { get }
 
