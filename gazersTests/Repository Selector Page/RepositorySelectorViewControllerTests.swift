@@ -23,7 +23,10 @@ class RepositorySelectorViewControllerTests: QuickSpec {
         context("Testing the RepositorySelectorViewController") {
             beforeEach {
                 let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                self.viewController = storyboard.instantiateViewController(identifier: RepositorySelectorViewController.identifier) as? RepositorySelectorViewController
+                self.viewController = storyboard.instantiateViewController(identifier: RepositorySelectorViewController.identifier, creator: { (coder: NSCoder) -> BaseViewController? in
+                    let viewModel = RepositorySelectorViewModel()
+                    return RepositorySelectorViewController(coder: coder, viewModel: viewModel)
+                }) as? RepositorySelectorViewController
 
                 self.viewController.loadView()
                 self.viewController.viewDidLoad()

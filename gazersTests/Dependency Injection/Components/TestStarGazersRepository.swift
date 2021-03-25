@@ -16,11 +16,9 @@ class TestStarGazersRepository: StarGazersRepositoryService {
     let owner: String
     let perPageItems: Int
     let repository: String
-    private var currentPage: Int
 
     init(repository: String, owner: String, perPageItems: Int) {
         self.owner = owner
-        self.currentPage = 1
         self.repository = repository
         self.perPageItems = perPageItems
     }
@@ -29,11 +27,9 @@ class TestStarGazersRepository: StarGazersRepositoryService {
         return SignalProducer<[Gazer], NSError> { [weak self] (observer, lifetime) in
             guard let weakSelf = self else { return }
 
-            let minIndex = (weakSelf.currentPage - 1)*weakSelf.perPageItems
-            let maxIndex = min(weakSelf.currentPage*weakSelf.perPageItems, TestGazers.allTestGazers.count)
+            let minIndex = (page - 1)*weakSelf.perPageItems
+            let maxIndex = min(page*weakSelf.perPageItems, TestGazers.allTestGazers.count)
             let pagedGazsers = TestGazers.allTestGazers[minIndex..<maxIndex]
-
-            weakSelf.currentPage += 1
 
             observer.send(value: Array(pagedGazsers))
             observer.sendCompleted()
