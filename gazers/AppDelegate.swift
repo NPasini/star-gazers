@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Swinject
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,7 +33,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setupDependencyInjection() {
-        AssemblerWrapper.shared.register(assemblies: [AppServicesAssembly(), RepositoriesAssembly()])
+        var assemblies: [Assembly] = []
+
+        assemblies.append(AppServicesAssembly())
+        assemblies.append(ViewModelsAssembly())
+
+        if UserDefaults.standard.bool(forKey: "UITesting") {
+            assemblies.append(RepositoriesAssembly())
+        } else {
+            assemblies.append(RepositoriesAssembly())
+        }
+
+        AssemblerWrapper.shared.register(assemblies: assemblies)
     }
 }
 

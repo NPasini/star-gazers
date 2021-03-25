@@ -26,10 +26,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
 
             // Check if UITesting are running
-            if UserDefaults.standard.bool(forKey: "UITesting"), let testPage = UserDefaults.standard.string(forKey: "testPage") {
-                createViewControllerForTesting(test: testPage, using: navigationService, presenter: presenter)
+            if UserDefaults.standard.bool(forKey: "UITesting") {
+                createViewControllerForTesting(using: navigationService, presenter: presenter)
             } else {
-                navigationService?.push(page: .repositorySelector, with: nil, using: presenter, animated: false)
+                let viewModel = AssemblerWrapper.shared.resolve(RepositorySelectorViewModelProtocol.self)
+                navigationService?.push(page: .repositorySelector, with: viewModel, using: presenter, animated: false)
             }
         }
     }

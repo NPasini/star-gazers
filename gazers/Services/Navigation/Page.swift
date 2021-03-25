@@ -28,12 +28,13 @@ enum Page {
     }
 
     func getViewController(coder: NSCoder, viewModel: ViewModel?) -> BaseViewController? {
+        guard let vm = viewModel else { return nil }
+
         switch self {
         case .starGazerList:
-            guard let vm = viewModel else { return nil }
             return StarGazersListViewController(coder: coder, viewModel: vm)
         case .repositorySelector:
-            return RepositorySelectorViewController(coder: coder)
+            return RepositorySelectorViewController(coder: coder, viewModel: vm)
         }
     }
 }

@@ -8,18 +8,21 @@
 import UIKit
 
 extension SceneDelegate {
-    func createViewControllerForTesting(test: String, using navigationService: NavigationService?, presenter: UINavigationController) {
-        let environment = ProcessInfo.processInfo.environment
-//        guard let screenToLaunch = environment["screenToLaunch"] else { return }
+    func createViewControllerForTesting(using navigationService: NavigationService?, presenter: UINavigationController) {
 
         var page: Page?
         var viewModel: ViewModel?
+        let environment = ProcessInfo.processInfo.environment
 
-        switch test {
+        guard let testPage = environment["testPage"] else { return }
+
+        switch testPage {
         case "starGazerList":
             page = .starGazerList
+//            viewModel = JSONDecoder().decode(StarGazersListViewModelProtocol.self, from: mockedViewModelData!)
         case "repositorySelector":
             page = .repositorySelector
+            viewModel = RepositorySelectorViewModel()
         default: ()
         }
 
