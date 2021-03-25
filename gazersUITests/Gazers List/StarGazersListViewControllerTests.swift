@@ -25,7 +25,7 @@ class StarGazersListViewControllerTests: XCTestCase {
     }
 
     func testAppearance() throws {
-        XCTAssertFalse(app.navigationBars["Star Gazers List"].exists)
+        XCTAssert(app.navigationBars["Star Gazers List"].exists)
 
 //        let contentView = app.otherElements["contentView"]
 //        XCTAssertTrue(contentView.exists)

@@ -19,7 +19,7 @@ extension SceneDelegate {
         switch testPage {
         case "starGazerList":
             page = .starGazerList
-//            viewModel = JSONDecoder().decode(StarGazersListViewModelProtocol.self, from: mockedViewModelData!)
+            viewModel = StarGazersListViewModel(repositoryName: "test-name", repositoryOwner: "test-owner")
         case "repositorySelector":
             page = .repositorySelector
             viewModel = RepositorySelectorViewModel()
