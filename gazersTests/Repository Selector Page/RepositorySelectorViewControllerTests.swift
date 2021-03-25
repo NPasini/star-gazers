@@ -16,22 +16,21 @@ class RepositorySelectorViewControllerTests: QuickSpec {
     let testOwner: String = "TestOwner"
     let testRepository: String = "TestRepository"
 
-    let presenter = UINavigationController()
+    var presenter: UINavigationController!
+    var navigationService: NavigationService?
     var viewController: RepositorySelectorViewController!
 
     override func spec() {
         context("Testing the RepositorySelectorViewController") {
             beforeEach {
-                let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                self.viewController = storyboard.instantiateViewController(identifier: RepositorySelectorViewController.identifier, creator: { (coder: NSCoder) -> BaseViewController? in
-                    let viewModel = RepositorySelectorViewModel()
-                    return RepositorySelectorViewController(coder: coder, viewModel: viewModel)
-                }) as? RepositorySelectorViewController
+                AssemblerWrapper.shared.register(assemblies: [AppServicesAssembly()])
 
-                self.viewController.loadView()
-                self.viewController.viewDidLoad()
-                self.presenter.pushViewController(self.viewController, animated: false)
-                self.viewController.viewWillAppear(false)
+                self.presenter = UINavigationController()
+                self.navigationService = AssemblerWrapper.shared.resolve(NavigationService.self)
+
+                let viewModel = RepositorySelectorViewModel()
+                self.navigationService?.push(page: .repositorySelector, with: viewModel, using: self.presenter)
+                self.viewController = self.presenter.viewControllers.first as? RepositorySelectorViewController
             }
 
             describe("when is instantiated") {

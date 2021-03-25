@@ -15,14 +15,15 @@ class StarGazersListViewControllerTests: QuickSpec {
 
     let perpageItems: Int = 3
     let testOwner: String = "TestOwner"
-    var presenter: UINavigationController!
-    var navigationService: NavigationService?
     let testRepository: String = "TestRepository"
-    var viewController: StarGazersListViewController!
     let timeout: DispatchTimeInterval = .milliseconds(300)
     let pollingTimer: DispatchTimeInterval = .milliseconds(100)
     let secondPageGazers = [TestGazers.testGazer4, TestGazers.testGazer5]
     let firstPageGazers = [TestGazers.testGazer1, TestGazers.testGazer2, TestGazers.testGazer3]
+
+    var presenter: UINavigationController!
+    var navigationService: NavigationService?
+    var viewController: StarGazersListViewController!
 
     override func spec() {
         context("Testing the StarGazersListViewController") {
