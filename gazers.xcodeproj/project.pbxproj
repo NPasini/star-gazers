@@ -37,6 +37,7 @@
 		A8646A3A260AA51500604FE0 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646A39260AA51500604FE0 /* NavigationService.swift */; };
 		A8646A42260AA6D500604FE0 /* TestNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646A41260AA6D500604FE0 /* TestNavigation.swift */; };
 		A8646A4D260AA78A00604FE0 /* AppServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646A4C260AA78A00604FE0 /* AppServicesAssembly.swift */; };
+		A8646A96260BE2B000604FE0 /* SceneDelegate+UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8646A95260BE2B000604FE0 /* SceneDelegate+UITests.swift */; };
 		A864ED1F26075F56003E7F21 /* RepositorySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */; };
 		A864ED37260767A5003E7F21 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED36260767A5003E7F21 /* Navigation.swift */; };
 		A864ED3C260767D7003E7F21 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864ED3B260767D7003E7F21 /* Page.swift */; };
@@ -46,7 +47,7 @@
 		A8778E942601644A005EBB7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8778E922601644A005EBB7A /* Main.storyboard */; };
 		A8778E962601644B005EBB7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8778E952601644B005EBB7A /* Assets.xcassets */; };
 		A8778E992601644B005EBB7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8778E972601644B005EBB7A /* LaunchScreen.storyboard */; };
-		A8778EAF2601644B005EBB7A /* gazersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EAE2601644B005EBB7A /* gazersUITests.swift */; };
+		A8778EAF2601644B005EBB7A /* RepositorySelecectorViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EAE2601644B005EBB7A /* RepositorySelecectorViewControllerTests.swift */; };
 		A8778EDE260165FF005EBB7A /* StarGazersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EDD260165FF005EBB7A /* StarGazersRequest.swift */; };
 		A8778EE32601663F005EBB7A /* StarGazersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EE22601663F005EBB7A /* StarGazersResponse.swift */; };
 		A8778EE9260168FD005EBB7A /* Gazer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8778EE8260168FD005EBB7A /* Gazer.swift */; };
@@ -118,6 +119,7 @@
 		A8646A39260AA51500604FE0 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		A8646A41260AA6D500604FE0 /* TestNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigation.swift; sourceTree = "<group>"; };
 		A8646A4C260AA78A00604FE0 /* AppServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServicesAssembly.swift; sourceTree = "<group>"; };
+		A8646A95260BE2B000604FE0 /* SceneDelegate+UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+UITests.swift"; sourceTree = "<group>"; };
 		A864ED1E26075F56003E7F21 /* RepositorySelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelectorViewModel.swift; sourceTree = "<group>"; };
 		A864ED36260767A5003E7F21 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		A864ED3B260767D7003E7F21 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
@@ -132,7 +134,7 @@
 		A8778E9F2601644B005EBB7A /* gazersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gazersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8778EA52601644B005EBB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8778EAA2601644B005EBB7A /* gazersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gazersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8778EAE2601644B005EBB7A /* gazersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gazersUITests.swift; sourceTree = "<group>"; };
+		A8778EAE2601644B005EBB7A /* RepositorySelecectorViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySelecectorViewControllerTests.swift; sourceTree = "<group>"; };
 		A8778EB02601644B005EBB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8778EDD260165FF005EBB7A /* StarGazersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersRequest.swift; sourceTree = "<group>"; };
 		A8778EE22601663F005EBB7A /* StarGazersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarGazersResponse.swift; sourceTree = "<group>"; };
@@ -348,6 +350,14 @@
 			path = "Repository Selector Page";
 			sourceTree = "<group>";
 		};
+		A8646AAF260BEEBE00604FE0 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				A8778EAE2601644B005EBB7A /* RepositorySelecectorViewControllerTests.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		A864ED1D26075F44003E7F21 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +425,7 @@
 				A8778E9A2601644B005EBB7A /* Info.plist */,
 				A8778E8C2601644A005EBB7A /* AppDelegate.swift */,
 				A8778E8E2601644A005EBB7A /* SceneDelegate.swift */,
+				A8646A95260BE2B000604FE0 /* SceneDelegate+UITests.swift */,
 				A8778E952601644B005EBB7A /* Assets.xcassets */,
 				A8778ED026016550005EBB7A /* API */,
 				A822C6F32602194B00B8A0E8 /* Dependency Injection */,
@@ -443,7 +454,7 @@
 		A8778EAD2601644B005EBB7A /* gazersUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A8778EAE2601644B005EBB7A /* gazersUITests.swift */,
+				A8646AAF260BEEBE00604FE0 /* Pages */,
 				A8778EB02601644B005EBB7A /* Info.plist */,
 			);
 			path = gazersUITests;
@@ -608,8 +619,6 @@
 				A8778EA12601644B005EBB7A /* PBXTargetDependency */,
 			);
 			name = gazersTests;
-			packageProductDependencies = (
-			);
 			productName = gazersTests;
 			productReference = A8778E9F2601644B005EBB7A /* gazersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -622,7 +631,6 @@
 				A8778EA62601644B005EBB7A /* Sources */,
 				A8778EA72601644B005EBB7A /* Frameworks */,
 				A8778EA82601644B005EBB7A /* Resources */,
-				33585BF38029617A49CD2F21 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -716,23 +724,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		33585BF38029617A49CD2F21 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-gazers-gazersUITests/Pods-gazers-gazersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-gazers-gazersUITests/Pods-gazers-gazersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gazers-gazersUITests/Pods-gazers-gazersUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		784A8EA3418F1A98AB4C88D4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -846,6 +837,7 @@
 				A864ED37260767A5003E7F21 /* Navigation.swift in Sources */,
 				A8CDF4172607D80A0094BACB /* UITableView+Extensions.swift in Sources */,
 				A8FA92762607AD69008E1A4D /* StarGazersListViewController.swift in Sources */,
+				A8646A96260BE2B000604FE0 /* SceneDelegate+UITests.swift in Sources */,
 				A8CDF4222607E9090094BACB /* UITableViewCell+Extensions.swift in Sources */,
 				A8778E8F2601644A005EBB7A /* SceneDelegate.swift in Sources */,
 				A8646A3A260AA51500604FE0 /* NavigationService.swift in Sources */,
@@ -883,7 +875,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8778EAF2601644B005EBB7A /* gazersUITests.swift in Sources */,
+				A8778EAF2601644B005EBB7A /* RepositorySelecectorViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

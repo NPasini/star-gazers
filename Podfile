@@ -17,7 +17,6 @@ target 'gazers' do
   end
 
   target 'gazersUITests' do
-    testing_pods
   end
 
 end
