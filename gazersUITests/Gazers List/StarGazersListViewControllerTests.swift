@@ -14,7 +14,8 @@ class StarGazersListViewControllerTests: XCTestCase {
     override func setUp() {
         app = XCUIApplication()
 
-        app.launchArguments = ["-UITesting", "true", "-testPage", "starGazerList"]
+        app.launchArguments = ["-UITesting", "true"]
+        app.launchEnvironment = ["testPage": "starGazerList"]
 
         app.launch()
     }
