@@ -9,10 +9,11 @@ import Foundation
 
 enum Page {
     case starGazerList
+    case repositorySelector
 
     var storyboardId: String {
         switch self {
-        case .starGazerList:
+        case .starGazerList, .repositorySelector:
             return "Main"
         }
     }
@@ -21,6 +22,8 @@ enum Page {
         switch self {
         case .starGazerList:
             return StarGazersListViewController.identifier
+        case .repositorySelector:
+            return RepositorySelectorViewController.identifier
         }
     }
 
@@ -29,6 +32,8 @@ enum Page {
         case .starGazerList:
             guard let vm = viewModel else { return nil }
             return StarGazersListViewController(coder: coder, viewModel: vm)
+        case .repositorySelector:
+            return RepositorySelectorViewController(coder: coder)
         }
     }
 }
