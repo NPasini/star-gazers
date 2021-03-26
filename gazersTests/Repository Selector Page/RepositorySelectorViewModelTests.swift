@@ -35,7 +35,7 @@ class RepositorySelectorViewModelTests: QuickSpec {
             describe("the view model should not be valid") {
                 it("when is set only the repo name") {
                     self.viewModel.setRepositoryName(self.testRepository)
-                    
+
                     expect(self.viewModel.isValid()).to(equal(false))
                     expect(self.viewModel.repositoryOwner).to(equal(""))
                     expect(self.viewModel.repositoryName).to(equal(self.testRepository))
@@ -53,7 +53,7 @@ class RepositorySelectorViewModelTests: QuickSpec {
             }
 
             describe("the view model should be valid") {
-                it("when is set the repo owner and teh repo name") {
+                it("when both the repo owner and the repo name are set") {
                     self.viewModel.setRepositoryOwner(self.testOwner)
                     self.viewModel.setRepositoryName(self.testRepository)
 

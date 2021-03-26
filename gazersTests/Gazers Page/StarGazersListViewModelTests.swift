@@ -64,7 +64,7 @@ class StarGazersListViewModelTests: QuickSpec {
                     expect(self.viewModel.stopFetchingData.value).toEventually(equal(true), timeout: self.timeout, pollInterval: self.pollingTimer, description: nil)
                 }
 
-                it("should not fail when asking for new data once there are no more gazers") {
+                it("should do nothing when asking for new data once there are no more gazers") {
                     self.viewModel.getStarGazers()
 
                     // Wait first page data from repository are retrieved

@@ -34,7 +34,7 @@ class RepositorySelectorViewControllerTests: QuickSpec {
             }
 
             describe("when is instantiated") {
-                it("the UI should contain the default values") {
+                it("the UI should contain the correct values") {
                     expect(self.presenter.navigationBar.isHidden).to(equal(true))
 
                     expect(self.viewController.repoNameText.text).toNot(beNil())

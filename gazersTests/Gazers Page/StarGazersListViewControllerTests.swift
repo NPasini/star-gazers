@@ -39,7 +39,7 @@ class StarGazersListViewControllerTests: QuickSpec {
             }
 
             describe("when is instantiated") {
-                it("the UI should contain the default values") {
+                it("the UI should contain the correct initial values") {
                     expect(self.presenter.navigationBar.isHidden).to(equal(false))
 
                     expect(self.viewController.navigationItem.titleView).to(beAnInstanceOf(UILabel.self))
@@ -104,7 +104,7 @@ class StarGazersListViewControllerTests: QuickSpec {
             }
 
             describe("when is instantiated") {
-                it("the UI should contain the default values") {
+                it("the UI should contain the correct initial values") {
                     expect(self.presenter.navigationBar.isHidden).to(equal(false))
 
                     expect(self.viewController.navigationItem.titleView).to(beAnInstanceOf(UILabel.self))
