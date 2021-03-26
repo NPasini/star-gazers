@@ -1,0 +1,6 @@
+framework module Pods_gazers_gazersUITests {
+  umbrella header "Pods-gazers-gazersUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

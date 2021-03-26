@@ -1,0 +1,6 @@
+framework module Pods_gazers {
+  umbrella header "Pods-gazers-umbrella.h"
+
+  export *
+  module * { export * }
+}
