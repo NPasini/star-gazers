@@ -24,7 +24,7 @@ class NetworkMonitor: NetworkMonitorService {
         startNetworkMonitor()
     }
 
-    func stopMonitoring() {
+    deinit {
         networkMonitor.cancel()
     }
 

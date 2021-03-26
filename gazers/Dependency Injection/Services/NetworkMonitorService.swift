@@ -9,6 +9,4 @@ import ReactiveSwift
 
 protocol NetworkMonitorService {
     var isNetworkAvailable: Property<Bool?> { get }
-
-    func stopMonitoring()
 }
