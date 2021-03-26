@@ -23,7 +23,7 @@ class RepositorySelectorViewControllerTests: QuickSpec {
     override func spec() {
         context("Testing the RepositorySelectorViewController") {
             beforeEach {
-                AssemblerWrapper.shared.register(assemblies: [AppServicesAssembly()])
+                AssemblerWrapper.shared.register(assemblies: [AppServicesWithAvailableNetworkAssembly()])
 
                 self.presenter = UINavigationController()
                 self.navigationService = AssemblerWrapper.shared.resolve(NavigationService.self)

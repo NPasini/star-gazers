@@ -26,7 +26,7 @@ class StarGazersListViewModelTests: QuickSpec {
     override func spec() {
         context("Testing the StarGazersListViewModel") {
             beforeEach {
-                AssemblerWrapper.shared.register(assemblies: [TestRepositoriesAssembly()])
+                AssemblerWrapper.shared.register(assemblies: [AppServicesWithAvailableNetworkAssembly()])
 
                 self.viewModel = StarGazersListViewModel(repositoryName: self.testRepository, repositoryOwner: self.testOwner, perPageItems: self.perpageItems)
             }
