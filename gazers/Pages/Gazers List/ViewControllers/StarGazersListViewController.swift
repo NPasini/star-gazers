@@ -53,7 +53,7 @@ class StarGazersListViewController: BaseViewController {
         })
 
         compositeDisposable += gazersViewModel.errorSignal.producer.filter({ $0 == true }).observe(on: UIScheduler()).on(value: { [weak self] _ in
-            self?.showError()
+            self?.showAlert(title: "Error", message: self?.viewModel.errorMessage() ?? "")
         }).start()
     }
 
@@ -95,8 +95,13 @@ class StarGazersListViewController: BaseViewController {
         tableView.tableFooterView = footerView
         tableView.register(viewType: StarGazerTableViewCell.self)
 
-        compositeDisposable += tableView.reactive.reloadData <~ gazersViewModel.gazersDataSource.signal.map({ _ in
+        compositeDisposable += tableView.reactive.reloadData <~ gazersViewModel.gazersDataSource.signal.map({ [weak self] (gazers: [Gazer]) in
             OSLogger.uiLog(message: "Reloading TableView", access: .public, type: .debug)
+            if gazers.count == 0, let isConnectionAvailable = self?.isNetworkConnectionAvailable, isConnectionAvailable {
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "No Gazers", message: "There are no gazers for this repository")
+                }
+            }
         })
 
         compositeDisposable += spinnerView.reactive.isAnimating <~ gazersViewModel.stopFetchingData.producer.map({ [weak self] (stopFetching: Bool) -> Bool in
@@ -140,8 +145,8 @@ class StarGazersListViewController: BaseViewController {
         }
     }
 
-    private func showError() {
-        let alert = UIAlertController(title: "Error", message: viewModel.errorMessage(), preferredStyle: .alert)
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default) { _ in
             alert.dismiss(animated: true, completion: nil)
         }
