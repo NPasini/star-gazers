@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    // MARK: - Private Methods
+
     private func setupDependencyInjection() {
         var assemblies: [Assembly] = []
 
