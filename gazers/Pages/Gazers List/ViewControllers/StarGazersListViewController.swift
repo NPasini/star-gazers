@@ -20,7 +20,7 @@ class StarGazersListViewController: BaseViewController {
     private let messageViewHeight: CGFloat = 40
     private let animationDuration: TimeInterval = 0.3
     private var isNetworkConnectionAvailable: Bool = true
-    private var compositeDisposable = CompositeDisposable()
+    private(set) var compositeDisposable = CompositeDisposable()
     private var networkMonitorService: NetworkMonitorService? = AssemblerWrapper.shared.resolve(NetworkMonitorService.self)
 
     var gazersViewModel: StarGazersListViewModelProtocol {
@@ -41,10 +41,14 @@ class StarGazersListViewController: BaseViewController {
         setTitle("Star Gazers List", color: UIColor.frontOrange)
         messageViewHeightConstraint.constant = 0
 
-        compositeDisposable += networkMonitorService?.isNetworkAvailable.signal.observeValues({ [weak self] (isAvailable: Bool?) in
+        compositeDisposable += networkMonitorService?.isNetworkAvailable.producer.startWithValues({ [weak self] (isAvailable: Bool?) in
             if let connectionAvailable = isAvailable {
                 self?.isNetworkConnectionAvailable = connectionAvailable
-                self?.shouldShowNetworkUnavailableMessage(!connectionAvailable)
+                if !connectionAvailable {
+                    self?.showMessageView(message: "Network not available")
+                } else {
+                    self?.hideMessageView()
+                }
             }
         })
 
@@ -115,14 +119,6 @@ class StarGazersListViewController: BaseViewController {
         customizeNavigationBar(backgroundColor: UIColor.backGrey, backButtonColor: UIColor.lightText)
     }
 
-    private func shouldShowNetworkUnavailableMessage(_ shouldShow: Bool) {
-        if shouldShow {
-            showMessageView(message: "Network not available")
-        } else {
-            hideMessageView()
-        }
-    }
-
     private func showMessageView(message: String) {
         DispatchQueue.main.async {
             self.messageLabel.text = message
@@ -182,7 +178,7 @@ extension StarGazersListViewController: UITableViewDataSourcePrefetching {
     }
 
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        if indexPaths.contains(where: isLoadingCell(at:)), isNetworkConnectionAvailable {
+        if indexPaths.contains(where: isLoadingCell(at:)) {
             OSLogger.uiLog(message: "Fetching new Star Gazers", access: .public, type: .debug)
             gazersViewModel.getStarGazers()
         }
